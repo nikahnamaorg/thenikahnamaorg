@@ -6,9 +6,12 @@ const Header = ({ activeSection, onNavigate }) => {
     <header className="header">
       <div className="header-container">
         <div className="logo" onClick={() => onNavigate('home')}>
-          <h1>The Nikahnama Org</h1>
-          <span>A Youth-led initiative, retelling the story of rights, laws, traditions and voices unheard.</span>
-        </div>
+  <img src={logo.png} alt="The Nikahnama Org Logo" className="logo.png" />
+  <div className="logo-text">
+    <h1>The Nikahnama Org</h1>
+    <span>Understanding your Rights!</span>
+  </div>
+</div>
         
         <nav className="nav">
           <button 
