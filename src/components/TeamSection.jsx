@@ -58,7 +58,7 @@ const TeamSection = () => {
         <div className="stand-for-grid">
           <div className="stand-card"><h4>The difference between law, culture, and religion.</h4></div>
           <div className="stand-card"><h4>Traditions and rituals still practiced today, and how they impact lives</h4></div>
-          <div className="stand-card"><h4>Marital rights</h4></div>
+          <div className="stand-card"><h4>Marital rights (mehr, divorce, custody, maintenance, delegated divorce)</h4></div>
           <div className="stand-card"><h4>Consent, legal protections, communication</h4></div>
         </div>
       </div>
