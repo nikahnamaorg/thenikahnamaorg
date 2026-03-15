@@ -25,16 +25,6 @@ const QuerySection = () => {
       question: "Are the laws the same for all Pakistani nationals?",
       answer: `Yes, they are. But many people don’t know what these laws actually mean for them. 
 For example: If someone is a foreign national and marries a person whose age is below Pakistan’s legal minimum, even if it’s acceptable in their country, that marriage won’t be accepted or registered in Pakistan and they won’t be able to bring their spouse here.`
-    },
-    {
-      id: 5,
-      question: "Can I share my personal story or feedback?",
-      answer: "Through workshops, social media, and open conversations that make the Nikahnama easy to understand for everyone."
-    },
-    {
-      id: 6,
-      question: "How can I contribute or collaborate?",
-      answer: "You can spread awareness, share our work, or join our future cohorts. Details about how to get involved will be posted on our Instagram soon."
     }
   ]
 

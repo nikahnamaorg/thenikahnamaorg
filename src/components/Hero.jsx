@@ -8,7 +8,7 @@ const Hero = ({ onNavigate }) => {
         <div className="hero-text">
           <h1>The NikahNama Org</h1>
           <p className="hero-subtitle">
-            Because Qabool Hai Comes with Clauses!
+            A Youth-led initiative, retelling the story of rights, laws, traditions and voices unheard.
           </p>
           <div className="hero-buttons">
             <button 
