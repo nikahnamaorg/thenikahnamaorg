@@ -1,13 +1,19 @@
 import React from 'react'
 import './Header.css'
+import logo from './logo.png'   // logo inside components folder
 
 const Header = ({ activeSection, onNavigate }) => {
   return (
     <header className="header">
       <div className="header-container">
+
         <div className="logo" onClick={() => onNavigate('home')}>
-          <h1>The Nikahnama Org</h1>
-          <span>Understanding your Rights!</span>
+          <img src={logo} alt="The Nikahnama Org Logo" className="logo-img" />
+
+          <div className="logo-text">
+            <h1>The Nikahnama Org</h1>
+            <span>Understanding your Rights!</span>
+          </div>
         </div>
         
         <nav className="nav">
@@ -17,24 +23,28 @@ const Header = ({ activeSection, onNavigate }) => {
           >
             Home
           </button>
-         <button 
-  className={activeSection === 'queries' ? 'nav-btn active' : 'nav-btn'}
-  onClick={() => onNavigate('queries')}
->
-  FAQs
-</button>
+
+          <button 
+            className={activeSection === 'queries' ? 'nav-btn active' : 'nav-btn'}
+            onClick={() => onNavigate('queries')}
+          >
+            FAQs
+          </button>
+
           <button 
             className={activeSection === 'team' ? 'nav-btn active' : 'nav-btn'}
             onClick={() => onNavigate('team')}
           >
             Meet The Team
           </button>
+
           <button 
             className={activeSection === 'clauses' ? 'nav-btn active' : 'nav-btn'}
             onClick={() => onNavigate('clauses')}
           >
             Nikahnama Clauses
           </button>
+
           <button 
             className={activeSection === 'suggestions' ? 'nav-btn active' : 'nav-btn'}
             onClick={() => onNavigate('suggestions')}
@@ -42,6 +52,7 @@ const Header = ({ activeSection, onNavigate }) => {
             Suggestions
           </button>
         </nav>
+
       </div>
     </header>
   )
