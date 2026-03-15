@@ -54,12 +54,12 @@ const TeamSection = () => {
 
       {/* WHAT WE STAND FOR */}
       <div className="what-we-stand-for">
-        <h3>What We Stand For</h3>
+        <h3>What We Cover</h3>
         <div className="stand-for-grid">
-          <div className="stand-card"><h4>We stand for justice</h4></div>
-          <div className="stand-card"><h4>We stand to ask questions and demand answers</h4></div>
-          <div className="stand-card"><h4>We stand to bring a change</h4></div>
-          <div className="stand-card"><h4>We stand with every voice that is silenced</h4></div>
+          <div className="stand-card"><h4>The difference between law, culture, and religion.</h4></div>
+          <div className="stand-card"><h4>Traditions and rituals still practiced today, and how they impact lives</h4></div>
+          <div className="stand-card"><h4>Marital rights</h4></div>
+          <div className="stand-card"><h4>Consent, legal protections, communication</h4></div>
         </div>
       </div>
 
