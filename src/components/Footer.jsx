@@ -15,10 +15,9 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Contact</h4>
             <p>Email: thenikahnama.org@gmail.com</p>
-            <p>Follow us on social media!
+            <p>Follow us on social media!</p>
+            <p> Instagram: @thenikahnama_org </p>
             
-            Instagram: @thenikahnama_org
-            </p>
           </div>
         </div>
         
