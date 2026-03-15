@@ -1,40 +1,29 @@
 import React from 'react'
 import './TeamSection.css'
 
+const mission = {
+  vision: "Our mission is to educate communities about the Nikahnama, promote understanding of its legal and spiritual importance, and share real stories that raise the voices of the unheard.",
+  values: [
+    "Accountability: We believe that those who suppress others or deny them their rightful freedoms should be brought to justice under the light of the law.",
+    "Empowerment: Our mission includes empowering those who feel weak or unheard, helping them find the confidence to speak up and stand for their rights.",
+    "Enlightenment: We strive to educate people about the Nikahnama, its clauses and the truths often buried by those who misuse power.",
+    "Transparency: We are committed to sharing facts that are honest and unaltered. Transparency is our utmost priority."
+  ]
+}
+
 const TeamSection = () => {
   const teamMembers = [
     { id: 1, name: "Eeshal Imran Akram", role: "Founder & CEO", description: "A Levels @ ISL", image: "" },
     { id: 2, name: "Shiza Imtiaz", role: "Co-Founder", description: "A Levels @ Lahore Alma", image: "" },
-    { id: 3, name: "Yahya Burhan", role: "Founders Associate", description: "A Levels @ Westminister Islamabad, 6'4 Alpha Performative Male", image: "" }
+    { id: 3, name: "Yahya Burhan", role: "Founders Associate", description: "A Levels @ Westminister Islamabad", image: "" }
   ]
-
-  const mission = {
-    vision: "Our mission is to educate communities about the Nikahnama, promote understanding of its legal and spiritual importance, and share real stories that raise the voices of the unheard.",
-    values: [
-      "Accountability: We believe that those who suppress others or deny them their rightful freedoms should be brought to justice under the light of the law.",
-      "Empowerment: Our mission includes empowering those who feel weak or unheard, helping them find the confidence to speak up and stand for their rights.",
-      "Enlightenment: We strive to educate people about the Nikahnama, its clauses and the truths often buried by those who misuse power.",
-      "Transparency: We are committed to sharing facts that are honest and unaltered. Transparency is our utmost priority."
-    ]
-  }
 
   return (
     <section className="section team-section">
-      <h2 className="section-title">Meet Our Team</h2>
       
-      <div className="mission-section">
-        <div className="mission-card">
-          <h3>Our Mission</h3>
-          <p>{mission.vision}</p>
-          <div className="values-list">
-            <h4>Our Values</h4>
-            <ul>
-              {mission.values.map((value, index) => <li key={index}>{value}</li>)}
-            </ul>
-          </div>
-        </div>
-      </div>
+      <h2 className="section-title">Meet Our Team</h2>
 
+      {/* TEAM FIRST */}
       <div className="team-grid">
         {teamMembers.map(member => (
           <div key={member.id} className="team-card">
@@ -46,6 +35,24 @@ const TeamSection = () => {
         ))}
       </div>
 
+      {/* MISSION AFTER TEAM */}
+      <div className="mission-section">
+        <div className="mission-card">
+          <h3>Our Mission</h3>
+          <p>{mission.vision}</p>
+
+          <div className="values-list">
+            <h4>Our Values</h4>
+            <ul>
+              {mission.values.map((value, index) => (
+                <li key={index}>{value}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* WHAT WE STAND FOR */}
       <div className="what-we-stand-for">
         <h3>What We Stand For</h3>
         <div className="stand-for-grid">
@@ -55,6 +62,7 @@ const TeamSection = () => {
           <div className="stand-card"><h4>We stand with every voice that is silenced</h4></div>
         </div>
       </div>
+
     </section>
   )
 }
