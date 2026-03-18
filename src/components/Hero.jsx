@@ -8,7 +8,7 @@ const Hero = ({ onNavigate }) => {
         <div className="hero-text">
           <h1>The NikahNama Org</h1>
           <p className="hero-subtitle">
-            A Youth-led initiative, retelling the story of rights, laws, traditions and voices unheard.
+            A youth-led initiative focused on simplifying the clauses of the Nikah Nama and raising awareness about the traditions, rituals, and cultural practices surrounding it, enabling young people to make informed and responsible decisions.
           </p>
           <div className="hero-buttons">
             <button 
@@ -35,7 +35,7 @@ const Hero = ({ onNavigate }) => {
           
           <div className="feature-card" onClick={() => onNavigate('team')}>
             <div className="feature-icon">👥</div>
-            <h3>Expert Team</h3>
+            <h3> Team</h3>
             <p>Meet our dedicated team working for your awareness</p>
           </div>
           

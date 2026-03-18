@@ -17,6 +17,7 @@ const Footer = () => {
             <p>Email: thenikahnama.org@gmail.com</p>
             <p>Follow us on social media!</p>
             <p> Instagram: @thenikahnama_org </p>
+            <p> LinkedIn: The Nikahnama Org</p>
             
           </div>
         </div>
