@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './TeamSection.css'
 
 const mission = {
@@ -12,21 +12,48 @@ const mission = {
 }
 
 const TeamSection = () => {
+  const [selectedMember, setSelectedMember] = useState(null)
+
   const teamMembers = [
-    { id: 1, name: "Eeshal Imran Akram", role: "Founder & CEO", description: "A Levels @ ISL", image: "/images/eeshal.webp" },
-    { id: 2, name: "Shiza Imtiaz", role: "Co-Founder", description: "A Levels @ Lahore Alma", image: "/images/shiza.jpg" },
-    { id: 3, name: "Yahya Burhan", role: "Founders Associate", description: "A Levels @ Westminister Islamabad", image: "/images/yahya.jpg" }
+    {
+      id: 1,
+      name: "Eeshal Imran Akram",
+      role: "Founder & CEO",
+      description: "A Levels @ ISL",
+      fullBio: "Passionate about advocacy and legal awareness, working to educate communities about Nikahnama rights and empower unheard voices.",
+      image: "/images/eeshal.webp"
+    },
+    {
+      id: 2,
+      name: "Shiza Imtiaz",
+      role: "Co-Founder",
+      description: "A Levels @ Lahore Alma",
+      fullBio: "Focused on spreading awareness and ensuring transparency in conversations around marriage, rights, and social norms.",
+      image: "/images/shiza.jpg"
+    },
+    {
+      id: 3,
+      name: "Yahya Burhan",
+      role: "Founders Associate",
+      description: "A Levels @ Westminster Islamabad",
+      fullBio: "Supports research and storytelling efforts, helping bring real experiences and issues to light.",
+      image: "/images/yahya.jpg"
+    }
   ]
 
   return (
     <section className="section team-section">
-      
+
       <h2 className="section-title">Meet Our Team</h2>
 
+      {/* TEAM */}
       <div className="team-grid">
         {teamMembers.map(member => (
-          <div key={member.id} className="team-card">
-            
+          <div
+            key={member.id}
+            className="team-card"
+            onClick={() => setSelectedMember(member)}
+          >
             <div className="team-image">
               <img src={member.image} alt={member.name} />
             </div>
@@ -38,6 +65,26 @@ const TeamSection = () => {
         ))}
       </div>
 
+      {/* MODAL */}
+      {selectedMember && (
+        <div className="modal-overlay" onClick={() => setSelectedMember(null)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+
+            <img src={selectedMember.image} alt={selectedMember.name} />
+
+            <h2>{selectedMember.name}</h2>
+            <p className="team-role">{selectedMember.role}</p>
+
+            <p className="modal-description">
+              {selectedMember.fullBio}
+            </p>
+
+            <button onClick={() => setSelectedMember(null)}>Close</button>
+          </div>
+        </div>
+      )}
+
+      {/* MISSION */}
       <div className="mission-section">
         <div className="mission-card">
           <h3>Our Mission</h3>
@@ -54,6 +101,7 @@ const TeamSection = () => {
         </div>
       </div>
 
+      {/* WHAT WE COVER */}
       <div className="what-we-stand-for">
         <h3>What We Cover</h3>
         <div className="stand-for-grid">
