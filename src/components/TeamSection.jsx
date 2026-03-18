@@ -1,11 +1,6 @@
 import React from 'react'
 import './TeamSection.css'
 
-// ✅ IMPORT IMAGES
-import eeshalImg from './eeshal.webp'
-import shizaImg from './shiza.jpg'
-import yahyaImg from './yahya.jpg'
-
 const mission = {
   vision: "Our mission is to educate communities about the Nikahnama, promote understanding of its legal and spiritual importance, and share real stories that raise the voices of the unheard.",
   values: [
@@ -18,9 +13,9 @@ const mission = {
 
 const TeamSection = () => {
   const teamMembers = [
-    { id: 1, name: "Eeshal Imran Akram", role: "Founder & CEO", description: "A Levels @ ISL", image: eeshalImg },
-    { id: 2, name: "Shiza Imtiaz", role: "Co-Founder", description: "A Levels @ Lahore Alma", image: shizaImg },
-    { id: 3, name: "Yahya Burhan", role: "Founders Associate", description: "A Levels @ Westminister Islamabad", image: yahyaImg }
+    { id: 1, name: "Eeshal Imran Akram", role: "Founder & CEO", description: "A Levels @ ISL", image: "/images/eeshal.webp" },
+    { id: 2, name: "Shiza Imtiaz", role: "Co-Founder", description: "A Levels @ Lahore Alma", image: "/images/shiza.jpg" },
+    { id: 3, name: "Yahya Burhan", role: "Founders Associate", description: "A Levels @ Westminister Islamabad", image: "/images/yahya.jpg" }
   ]
 
   return (
@@ -28,12 +23,10 @@ const TeamSection = () => {
       
       <h2 className="section-title">Meet Our Team</h2>
 
-      {/* TEAM FIRST */}
       <div className="team-grid">
         {teamMembers.map(member => (
           <div key={member.id} className="team-card">
             
-            {/* ✅ FIXED IMAGE */}
             <div className="team-image">
               <img src={member.image} alt={member.name} />
             </div>
@@ -45,7 +38,6 @@ const TeamSection = () => {
         ))}
       </div>
 
-      {/* MISSION AFTER TEAM */}
       <div className="mission-section">
         <div className="mission-card">
           <h3>Our Mission</h3>
@@ -62,7 +54,6 @@ const TeamSection = () => {
         </div>
       </div>
 
-      {/* WHAT WE STAND FOR */}
       <div className="what-we-stand-for">
         <h3>What We Cover</h3>
         <div className="stand-for-grid">
