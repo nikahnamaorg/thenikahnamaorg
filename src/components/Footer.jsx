@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-section">
             <h3>The Nikahnama Org</h3>
-            <p>A Youth-led initiative, retelling the story of rights, laws, traditions and voices unheard.</p>
+            <p>A youth-led initiative focused on simplifying the clauses of the Nikah Nama and raising awareness about the traditions, rituals, and cultural practices surrounding it, enabling young people to make informed and responsible decisions.</p>
           </div>
         
           
