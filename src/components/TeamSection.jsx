@@ -20,7 +20,7 @@ const TeamSection = () => {
       name: "Eeshal Imran Akram",
       role: "Founder & CEO",
       description: "A Levels @ ISL",
-      fullBio: "Passionate about advocacy and legal awareness, working to educate communities about Nikahnama rights and empower unheard voices.",
+      fullBio: "Eeshal Imran is an A-Level student at International School Lahore and founder of The Nikahnama Org, advocating for awareness of marital rights and social empowerment. She serves as HR Lead at Mojza and holds ambassador roles with ThinkFest’26, BOEC, Crimson, and ILC, leading outreach, communications, and youth engagement initiatives. Multilingual and skilled in outreach, digital marketing, and storytelling, Eeshal combines leadership with community impact to educate and empower others.",
       image: "/images/eeshal.webp"
     },
     {
@@ -28,7 +28,7 @@ const TeamSection = () => {
       name: "Shiza Imtiaz",
       role: "Co-Founder",
       description: "A Levels @ Lahore Alma",
-      fullBio: "Focused on spreading awareness and ensuring transparency in conversations around marriage, rights, and social norms.",
+      fullBio: "Shiza Imtiaz is an A-Level student at The Lahore Alma and co-founder of The Nikahnama Org, where she leads awareness campaigns on marital rights and gender equity. She also serves as an ambassador for ZNotes and has experience in research, creative marketing, and graphic design, combining creativity with strategic thinking to engage youth and promote social impact. Passionate about arts, storytelling, and education, Shiza is dedicated to fostering learning, awareness, and meaningful community initiatives.",
       image: "/images/shiza.jpg"
     },
     {
@@ -36,7 +36,7 @@ const TeamSection = () => {
       name: "Yahya Burhan",
       role: "Founders Associate",
       description: "A Levels @ Westminster Islamabad",
-      fullBio: "Supports research and storytelling efforts, helping bring real experiences and issues to light.",
+      fullBio: "Yahya Burhan is an A-Level student at Westminster Academy, Islamabad and Founder's Associate at The Nikahnama Org, where he supports research, growth, and outreach initiatives to promote awareness of marital rights. He is also a youth ambassador for organizations including United Nations Youth, Gentle Gestures, TheirWorld, and IYMC, with experience in research, community engagement, and digital advocacy. Yahya combines analytical thinking, leadership, and strategic outreach to drive youth empowerment and educational initiatives locally and globally.",
       image: "/images/yahya.jpg"
     }
   ]
