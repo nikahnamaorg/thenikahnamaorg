@@ -1,6 +1,11 @@
 import React from 'react'
 import './TeamSection.css'
 
+// ✅ IMPORT IMAGES
+import eeshalImg from './eeshal.webp'
+import shizaImg from './shiza.jpg'
+import yahyaImg from './yahya.jpg'
+
 const mission = {
   vision: "Our mission is to educate communities about the Nikahnama, promote understanding of its legal and spiritual importance, and share real stories that raise the voices of the unheard.",
   values: [
@@ -13,9 +18,9 @@ const mission = {
 
 const TeamSection = () => {
   const teamMembers = [
-    { id: 1, name: "Eeshal Imran Akram", role: "Founder & CEO", description: "A Levels @ ISL", image: "eeshal.webp" },
-    { id: 2, name: "Shiza Imtiaz", role: "Co-Founder", description: "A Levels @ Lahore Alma", image: "shiza.jpg" },
-    { id: 3, name: "Yahya Burhan", role: "Founders Associate", description: "A Levels @ Westminister Islamabad", image: "yahya.jpg" }
+    { id: 1, name: "Eeshal Imran Akram", role: "Founder & CEO", description: "A Levels @ ISL", image: eeshalImg },
+    { id: 2, name: "Shiza Imtiaz", role: "Co-Founder", description: "A Levels @ Lahore Alma", image: shizaImg },
+    { id: 3, name: "Yahya Burhan", role: "Founders Associate", description: "A Levels @ Westminister Islamabad", image: yahyaImg }
   ]
 
   return (
@@ -27,7 +32,12 @@ const TeamSection = () => {
       <div className="team-grid">
         {teamMembers.map(member => (
           <div key={member.id} className="team-card">
-            <div className="team-image">{member.image}</div>
+            
+            {/* ✅ FIXED IMAGE */}
+            <div className="team-image">
+              <img src={member.image} alt={member.name} />
+            </div>
+
             <h3>{member.name}</h3>
             <p className="team-role">{member.role}</p>
             <p className="team-description">{member.description}</p>
