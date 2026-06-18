@@ -26,19 +26,11 @@ const TeamSection = () => {
     {
       id: 2,
       name: "Shiza Imtiaz",
-      role: "Co-Founder",
+      role: "Co-Founder & COO",
       description: "A Levels @ Lahore Alma",
       fullBio: "Shiza Imtiaz is an A-Level student at The Lahore Alma and co-founder of The Nikahnama Org, where she leads awareness campaigns on marital rights and gender equity. She also serves as an ambassador for ZNotes and has experience in research, creative marketing, and graphic design, combining creativity with strategic thinking to engage youth and promote social impact. Passionate about arts, storytelling, and education, Shiza is dedicated to fostering learning, awareness, and meaningful community initiatives.",
       image: "/images/shiza.jpg"
     },
-    {
-      id: 3,
-      name: "Yahya Burhan",
-      role: "Founders Associate",
-      description: "A Levels @ Westminster Islamabad",
-      fullBio: "Yahya Burhan is an A-Level student at Westminster Academy, Islamabad and Founder's Associate at The Nikahnama Org, where he supports research, growth, and outreach initiatives to promote awareness of marital rights. He is also a youth ambassador for organizations including United Nations Youth, Gentle Gestures, TheirWorld, and IYMC, with experience in research, community engagement, and digital advocacy. Yahya combines analytical thinking, leadership, and strategic outreach to drive youth empowerment and educational initiatives locally and globally.",
-      image: "/images/yahya.jpg"
-    }
   ]
 
   return (
