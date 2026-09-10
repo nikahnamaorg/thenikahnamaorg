@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './TeamSection.css'
+import Reveal from './Reveal'
 
 const mission = {
   vision: "Our mission is to educate communities about the Nikahnama, promote understanding of its legal and spiritual importance, and share real stories that raise the voices of the unheard.",
@@ -36,24 +37,32 @@ const TeamSection = () => {
   return (
     <section className="section team-section">
 
+      <span className="section-kicker">The People Behind It</span>
       <h2 className="section-title">Meet Our Team</h2>
+      <div className="ornament">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="8" r="3.4" />
+          <path d="M5 20c0-3.9 3.1-7 7-7s7 3.1 7 7" />
+        </svg>
+      </div>
 
       {/* TEAM */}
       <div className="team-grid">
-        {teamMembers.map(member => (
-          <div
-            key={member.id}
-            className="team-card"
-            onClick={() => setSelectedMember(member)}
-          >
-            <div className="team-image">
-              <img src={member.image} alt={member.name} />
-            </div>
+        {teamMembers.map((member, i) => (
+          <Reveal key={member.id} delay={i * 0.1}>
+            <div
+              className="team-card"
+              onClick={() => setSelectedMember(member)}
+            >
+              <div className="team-image">
+                <img src={member.image} alt={member.name} />
+              </div>
 
-            <h3>{member.name}</h3>
-            <p className="team-role">{member.role}</p>
-            <p className="team-description">{member.description}</p>
-          </div>
+              <h3>{member.name}</h3>
+              <p className="team-role">{member.role}</p>
+              <p className="team-description">{member.description}</p>
+            </div>
+          </Reveal>
         ))}
       </div>
 
@@ -77,7 +86,7 @@ const TeamSection = () => {
       )}
 
       {/* MISSION */}
-      <div className="mission-section">
+      <Reveal className="mission-section" as="div">
         <div className="mission-card">
           <h3>Our Mission</h3>
           <p>{mission.vision}</p>
@@ -91,16 +100,16 @@ const TeamSection = () => {
             </ul>
           </div>
         </div>
-      </div>
+      </Reveal>
 
       {/* WHAT WE COVER */}
       <div className="what-we-stand-for">
         <h3>What We Cover</h3>
         <div className="stand-for-grid">
-          <div className="stand-card"><h4>The difference between law, culture, and religion.</h4></div>
-          <div className="stand-card"><h4>Traditions and rituals still practiced today, and how they impact lives</h4></div>
-          <div className="stand-card"><h4>Marital rights (mehr, divorce, custody, maintenance, delegated divorce)</h4></div>
-          <div className="stand-card"><h4>Consent, legal protections, communication</h4></div>
+          <Reveal delay={0}><div className="stand-card"><h4>The difference between law, culture, and religion.</h4></div></Reveal>
+          <Reveal delay={0.1}><div className="stand-card"><h4>Traditions and rituals still practiced today, and how they impact lives</h4></div></Reveal>
+          <Reveal delay={0.2}><div className="stand-card"><h4>Marital rights (mehr, divorce, custody, maintenance, delegated divorce)</h4></div></Reveal>
+          <Reveal delay={0.3}><div className="stand-card"><h4>Consent, legal protections, communication</h4></div></Reveal>
         </div>
       </div>
 

@@ -1,55 +1,73 @@
 .clauses-section {
-  background: var(--light-beige);
+  background: var(--canvas);
+}
+
+.clauses-section .ornament {
+  margin-bottom: 3.2rem;
 }
 
 .categories-filter {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin-bottom: 40px;
+  gap: 14px;
+  margin-bottom: 44px;
   flex-wrap: wrap;
 }
 
 .filter-btn {
-  background: white;
-  border: 2px solid var(--wine-red);
-  color: var(--wine-red);
-  padding: 12px 25px;
-  border-radius: 25px;
+  background: transparent;
+  border: 1.5px solid var(--maroon);
+  color: var(--maroon);
+  padding: 11px 24px;
+  border-radius: 999px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 16px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
 }
 
 .filter-btn:hover {
-  background: var(--wine-red);
-  color: white;
+  background: var(--maroon);
+  color: var(--cream);
   transform: translateY(-2px);
 }
 
 .filter-btn.active {
-  background: var(--wine-red);
-  color: white;
+  background: var(--maroon);
+  color: var(--cream);
 }
 
 .clauses-grid {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
 .clause-card {
-  background: white;
-  border-radius: 15px;
-  padding: 30px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  border-top: 5px solid var(--wine-red);
+  background: var(--cream-soft);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 10px 28px rgba(91, 15, 9, 0.1);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
+  border-top: 3px solid var(--gold);
 }
 
 .clause-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(114, 47, 55, 0.2);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(91, 15, 9, 0.2);
+}
+
+/* alternate cards in dark maroon, echoing the org's own Instagram grid */
+.clauses-grid > .reveal:nth-child(3n+2) .clause-card {
+  background: var(--maroon);
+  border-top-color: var(--gold);
+}
+
+.clauses-grid > .reveal:nth-child(3n+2) .clause-card h3,
+.clauses-grid > .reveal:nth-child(3n+2) .clause-card .clause-content p {
+  color: var(--cream);
 }
 
 .clause-header {
@@ -62,42 +80,40 @@
 }
 
 .clause-header h3 {
-  color: var(--wine-red);
-  font-size: 1.5rem;
+  color: var(--maroon);
+  font-size: 1.4rem;
   margin: 0;
 }
 
 .importance-badge {
   padding: 6px 15px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: bold;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-family: var(--font-display);
+  font-weight: 700;
   white-space: nowrap;
 }
 
 .importance-badge.high {
-  background: #ffebee;
-  color: #c62828;
-  border: 1px solid #ffcdd2;
+  background: #f7dede;
+  color: #8c2020;
 }
 
 .importance-badge.medium {
-  background: #fff3e0;
-  color: #ef6c00;
-  border: 1px solid #ffe0b2;
+  background: #f5e3c8;
+  color: #8a5a10;
 }
 
 .importance-badge.low {
-  background: #e8f5e8;
-  color: #2e7d32;
-  border: 1px solid #c8e6c9;
+  background: #dcead9;
+  color: #2b6b2b;
 }
 
 .clause-description {
-  color: var(--gold-accent);
+  color: var(--gold);
   font-style: italic;
   margin-bottom: 20px;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 
 .clause-content {
@@ -106,8 +122,8 @@
 
 .clause-content p {
   margin-bottom: 10px;
-  line-height: 1.6;
-  color: var(--text-dark);
+  line-height: 1.65;
+  color: var(--ink);
 }
 
 .clause-footer {
@@ -115,8 +131,8 @@
   justify-content: flex-end;
 }
 
-.insta-link {
-  color: var(--wine-red);
+.clause-footer a {
+  color: var(--maroon);
   text-decoration: none;
   font-weight: bold;
   display: flex;
@@ -125,8 +141,8 @@
   transition: color 0.3s ease;
 }
 
-.insta-link:hover {
-  color: var(--dark-wine);
+.clause-footer a:hover {
+  color: var(--gold);
   text-decoration: underline;
 }
 
@@ -136,17 +152,18 @@
 }
 
 .note-card {
-  background: linear-gradient(135deg, var(--wine-red) 0%, var(--dark-wine) 100%);
-  color: white;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(114, 47, 55, 0.3);
+  background: linear-gradient(135deg, var(--maroon) 0%, var(--maroon-dark) 100%);
+  color: var(--cream);
+  padding: 34px;
+  border-radius: 16px;
+  box-shadow: 0 16px 36px rgba(91, 15, 9, 0.28);
+  border: 1px solid rgba(201, 162, 76, 0.35);
 }
 
 .note-card h4 {
-  color: white;
+  color: var(--cream);
   margin-bottom: 20px;
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   text-align: center;
 }
 
@@ -156,16 +173,16 @@
 
 .note-card li {
   padding: 10px 0;
-  padding-left: 25px;
+  padding-left: 28px;
   position: relative;
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 .note-card li::before {
   content: '✓';
   position: absolute;
   left: 0;
-  color: var(--gold-accent);
+  color: var(--gold);
   font-weight: bold;
 }
 
@@ -174,17 +191,17 @@
     flex-direction: column;
     align-items: flex-start;
   }
-  
+
   .clause-card {
-    padding: 20px;
+    padding: 22px;
   }
-  
+
   .categories-filter {
     gap: 10px;
   }
-  
+
   .filter-btn {
-    padding: 10px 20px;
-    font-size: 14px;
+    padding: 9px 18px;
+    font-size: 0.85rem;
   }
 }

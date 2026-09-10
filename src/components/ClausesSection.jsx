@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './ClausesSection.css'
+import Reveal from './Reveal'
 
 const ClausesSection = () => {
   const [activeCategory, setActiveCategory] = useState('all')
@@ -26,8 +27,14 @@ const ClausesSection = () => {
 
   return (
     <section className="section clauses-section">
+      <span className="section-kicker">Know Before You Sign</span>
       <h2 className="section-title">Nikahnama Clauses Explained</h2>
-      
+      <div className="ornament">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13Z" />
+        </svg>
+      </div>
+
       <div className="categories-filter">
         {categories.map(cat => (
           <button
@@ -41,38 +48,42 @@ const ClausesSection = () => {
       </div>
 
       <div className="clauses-grid">
-        {filteredClauses.map(clause => (
-          <div key={clause.id} className="clause-card">
-            <div className="clause-header">
-              <h3>{clause.title}</h3>
-              <span className={`importance-badge ${clause.importance.toLowerCase()}`}>
-                {clause.importance} Importance
-              </span>
-            </div>
-            <p className="clause-description">{clause.description}</p>
-            <div className="clause-content">
-              {clause.content.split('\n').map((line, i) => <p key={i}>{line}</p>)}
-            </div>
-            {clause.instaPost && (
-              <div className="clause-footer">
-                <a href={clause.instaPost} target="_blank" rel="noopener noreferrer">📱 View on Instagram</a>
+        {filteredClauses.map((clause, i) => (
+          <Reveal key={clause.id} delay={(i % 3) * 0.1}>
+            <div className="clause-card">
+              <div className="clause-header">
+                <h3>{clause.title}</h3>
+                <span className={`importance-badge ${clause.importance.toLowerCase()}`}>
+                  {clause.importance} Importance
+                </span>
               </div>
-            )}
-          </div>
+              <p className="clause-description">{clause.description}</p>
+              <div className="clause-content">
+                {clause.content.split('\n').map((line, i) => <p key={i}>{line}</p>)}
+              </div>
+              {clause.instaPost && (
+                <div className="clause-footer">
+                  <a href={clause.instaPost} target="_blank" rel="noopener noreferrer">📱 View on Instagram</a>
+                </div>
+              )}
+            </div>
+          </Reveal>
         ))}
       </div>
 
-      <div className="clauses-notes">
-        <div className="note-card">
-          <h4>💡 Important Notes</h4>
-          <ul>
-            <li>All clauses must comply with Islamic principles</li>
-            <li>Consult with a knowledgeable scholar before adding custom clauses</li>
-            <li>Ensure both parties fully understand each clause</li>
-            <li>Keep a copy of your signed Nikahnama safe</li>
-          </ul>
+      <Reveal>
+        <div className="clauses-notes">
+          <div className="note-card">
+            <h4>💡 Important Notes</h4>
+            <ul>
+              <li>All clauses must comply with Islamic principles</li>
+              <li>Consult with a knowledgeable scholar before adding custom clauses</li>
+              <li>Ensure both parties fully understand each clause</li>
+              <li>Keep a copy of your signed Nikahnama safe</li>
+            </ul>
+          </div>
         </div>
-      </div>
+      </Reveal>
     </section>
   )
 }

@@ -1,13 +1,16 @@
 .suggestions-section {
-  background: white;
-  padding: 50px 20px;
+  background: var(--canvas);
+}
+
+.suggestions-section .ornament {
+  margin-bottom: 3.2rem;
 }
 
 .suggestions-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-  margin-bottom: 50px;
+  margin-bottom: 56px;
 }
 
 .suggestions-info {
@@ -16,29 +19,30 @@
 }
 
 .info-card {
-  background: var(--light-beige);
-  padding: 30px;
-  border-radius: 15px;
+  background: var(--cream-soft);
+  padding: 32px;
+  border-radius: 16px;
   height: fit-content;
-  border-left: 5px solid var(--wine-red);
+  border-top: 3px solid var(--gold);
+  box-shadow: 0 8px 24px rgba(91, 15, 9, 0.08);
 }
 
 .info-card h3 {
-  color: var(--wine-red);
-  margin-bottom: 20px;
-  font-size: 1.8rem;
+  color: var(--maroon);
+  margin-bottom: 18px;
+  font-size: 1.7rem;
 }
 
 .info-card p {
-  color: var(--text-dark);
-  line-height: 1.6;
+  color: var(--ink);
+  line-height: 1.65;
   margin-bottom: 25px;
 }
 
 .suggestion-types h4 {
-  color: var(--wine-red);
+  color: var(--maroon);
   margin-bottom: 15px;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
 }
 
 .suggestion-types ul {
@@ -50,22 +54,22 @@
   padding: 8px 0;
   padding-left: 25px;
   position: relative;
-  color: var(--text-light);
+  color: var(--ink-light);
 }
 
 .suggestion-types li::before {
   content: '•';
   position: absolute;
   left: 10px;
-  color: var(--wine-red);
+  color: var(--gold);
   font-weight: bold;
 }
 
 .google-form-container {
-  background: var(--ivory-beige);
-  padding: 30px;
-  border-radius: 15px;
-  border: 2px dashed var(--wine-red);
+  background: var(--cream-soft);
+  padding: 26px;
+  border-radius: 16px;
+  border: 2px dashed var(--gold);
   display: flex;
   justify-content: center;
 }
@@ -73,39 +77,40 @@
 .google-form-container iframe.google-form-iframe {
   width: 100%;
   max-width: 800px;
-  min-height: 900px; /* ensures the form has enough height */
-  height: 100vh;     /* takes full viewport height */
+  min-height: 900px;
+  height: 100vh;
   border: 0;
   border-radius: 10px;
-  box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 20px rgba(91, 15, 9, 0.1);
 }
 
 .community-guidelines {
-  background: var(--light-beige);
-  padding: 40px;
-  border-radius: 15px;
+  background: var(--cream-soft);
+  padding: 44px 40px;
+  border-radius: 18px;
 }
 
 .community-guidelines h3 {
   text-align: center;
-  color: var(--wine-red);
+  color: var(--maroon);
   margin-bottom: 40px;
-  font-size: 2rem;
+  font-size: 1.9rem;
 }
 
 .guidelines-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 25px;
+  gap: 24px;
 }
 
 .guideline-card {
-  background: white;
+  background: var(--cream);
   padding: 25px;
-  border-radius: 10px;
+  border-radius: 12px;
   text-align: center;
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 18px rgba(91, 15, 9, 0.08);
   transition: transform 0.3s ease;
+  border-top: 2px solid var(--maroon);
 }
 
 .guideline-card:hover {
@@ -113,24 +118,23 @@
 }
 
 .guideline-card h4 {
-  color: var(--wine-red);
-  margin-bottom: 15px;
-  font-size: 1.2rem;
+  color: var(--maroon);
+  margin-bottom: 12px;
+  font-size: 1.1rem;
 }
 
 .guideline-card p {
-  color: var(--text-light);
-  line-height: 1.5;
+  color: var(--ink-light);
+  line-height: 1.55;
   font-size: 0.95rem;
 }
 
-/* Responsive styles */
 @media (max-width: 968px) {
   .suggestions-container {
     grid-template-columns: 1fr;
     gap: 30px;
   }
-  
+
   .google-form-container {
     order: -1;
   }
@@ -140,15 +144,15 @@
   .suggestions-container {
     gap: 20px;
   }
-  
+
   .info-card, .google-form-container {
     padding: 20px;
   }
-  
+
   .community-guidelines {
     padding: 30px 20px;
   }
-  
+
   .guidelines-grid {
     grid-template-columns: 1fr;
     gap: 20px;

@@ -29,7 +29,7 @@ function App() {
   return (
     <div className="App">
       <Header activeSection={activeSection} onNavigate={setActiveSection} />
-      <main>
+      <main key={activeSection} className="section-enter">
         {renderSection()}
       </main>
       <Footer />

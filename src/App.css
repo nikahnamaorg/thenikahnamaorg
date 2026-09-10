@@ -1,11 +1,21 @@
 :root {
-  --ivory-beige: #F5F5F0;
-  --wine-red: #722F37;
-  --dark-wine: #5A252B;
-  --light-beige: #FAFAF5;
-  --gold-accent: #C8A97E;
-  --text-dark: #333333;
-  --text-light: #666666;
+  /* Palette pulled straight from the org's own Instagram/brand kit: deep
+     blood-maroon (sampled directly from their logo file) for text/accents,
+     on a warm woven-linen canvas (their actual reference swatch) instead of
+     large red fields + antique gold, in the vintage nikahnama-ticket look. */
+  --maroon: #5b0f09;
+  --maroon-dark: #3a0a05;
+  --maroon-tint: #d8b9ae;
+  --canvas: #c3b696;
+  --cream: #f6eee1;
+  --cream-soft: #efe4d3;
+  --gold: #c9a24c;
+  --gold-soft: #e3cf9e;
+  --ink: #2b1410;
+  --ink-light: #6b5850;
+
+  --font-display: 'Playfair Display', 'Georgia', serif;
+  --font-body: 'Lora', 'Georgia', serif;
 }
 
 * {
@@ -14,11 +24,19 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: 'Georgia', 'Times New Roman', serif;
-  background-color: var(--ivory-beige);
-  color: var(--text-dark);
-  line-height: 1.6;
+  font-family: var(--font-body);
+  background-color: var(--canvas);
+  color: var(--ink);
+  line-height: 1.65;
+  /* faint woven-linen grain, matching their own reference texture */
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(91, 15, 9, 0.07) 1px, transparent 0);
+  background-size: 22px 22px;
 }
 
 .App {
@@ -27,100 +45,169 @@ body {
   flex-direction: column;
 }
 
-html {
-  scroll-behavior: smooth;
+main {
+  flex: 1;
+}
+
+/* Re-triggers on every nav change since App.jsx keys <main> by section */
+.section-enter {
+  animation: sectionFadeIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes sectionFadeIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scroll-reveal utility, applied via the <Reveal> component */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--maroon);
+  font-weight: 600;
+}
+
+a {
+  color: inherit;
 }
 
 .btn-primary {
-  background: var(--wine-red);
-  color: white;
-  padding: 12px 30px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
+  background: var(--maroon);
+  color: var(--cream);
+  padding: 13px 32px;
+  border: 1.5px solid var(--maroon);
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  font-size: 1rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease, background 0.3s ease;
   text-decoration: none;
   display: inline-block;
   text-align: center;
 }
 
 .btn-primary:hover {
-  background: var(--dark-wine);
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(114, 47, 55, 0.3);
+  background: var(--maroon-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(91, 15, 9, 0.35);
 }
 
 .btn-secondary {
   background: transparent;
-  color: var(--wine-red);
-  padding: 12px 30px;
-  border: 2px solid var(--wine-red);
-  border-radius: 5px;
-  font-size: 16px;
+  color: var(--maroon);
+  padding: 13px 32px;
+  border: 1.5px solid var(--maroon);
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  font-size: 1rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease, background 0.3s ease, color 0.3s ease;
   text-decoration: none;
   display: inline-block;
   text-align: center;
 }
 
 .btn-secondary:hover {
-  background: var(--wine-red);
-  color: white;
-  transform: translateY(-2px);
+  background: var(--maroon);
+  color: var(--cream);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(91, 15, 9, 0.25);
 }
 
 .section {
-  padding: 80px 20px;
+  padding: 90px 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .section-title {
   text-align: center;
-  color: var(--wine-red);
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  position: relative;
+  color: var(--maroon);
+  font-size: clamp(2rem, 4vw, 2.7rem);
+  margin-bottom: 1.1rem;
+  letter-spacing: 0.01em;
 }
 
-.section-title::after {
+.section-kicker {
+  display: block;
+  text-align: center;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 0.75rem;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 0.9rem;
+}
+
+/* Small gold ornament used under section titles, in place of a plain bar */
+.ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto 3.2rem;
+  color: var(--gold);
+  width: fit-content;
+}
+
+.ornament::before,
+.ornament::after {
   content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 3px;
-  background: var(--gold-accent);
+  width: 44px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold));
+}
+
+.ornament::after {
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+
+.ornament svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
 }
 
 .card {
-  background: white;
-  border-radius: 10px;
+  background: var(--cream-soft);
+  border-radius: 14px;
   padding: 30px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  border-left: 4px solid var(--wine-red);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 26px rgba(91, 15, 9, 0.1);
+  border-top: 3px solid var(--maroon);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(91, 15, 9, 0.18);
 }
 
 @media (max-width: 768px) {
   .section {
-    padding: 60px 20px;
+    padding: 64px 20px;
   }
-  
+
   .section-title {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
-  
+
   .btn-primary, .btn-secondary {
-    padding: 10px 20px;
-    font-size: 14px;
+    padding: 11px 22px;
+    font-size: 0.9rem;
   }
 }

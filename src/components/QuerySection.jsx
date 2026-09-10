@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './QuerySection.css'
+import Reveal from './Reveal'
 
 const QuerySection = () => {
   const [activeFAQ, setActiveFAQ] = useState(null)
@@ -32,18 +33,26 @@ For example: If someone is a foreign national and marries a person whose age is 
 
   return (
     <section className="section query-section">
-      <h2 className="section-title">Frequently Asked Questions</h2>
+      <span className="section-kicker">Frequently Asked</span>
+      <h2 className="section-title">Questions & Answers</h2>
+      <div className="ornament">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 17.5h.01M9.2 9.3a2.8 2.8 0 1 1 4.6 2.4c-.9.7-1.8 1.2-1.8 2.5" />
+        </svg>
+      </div>
       <div className="faq-list">
-        {faqs.map(faq => (
-          <div key={faq.id} className={`faq-item ${activeFAQ === faq.id ? 'active' : ''}`}>
-            <div className="faq-question" onClick={() => toggleFAQ(faq.id)}>
-              <h4>{faq.question}</h4>
-              <span>{activeFAQ === faq.id ? '−' : '+'}</span>
+        {faqs.map((faq, i) => (
+          <Reveal key={faq.id} delay={Math.min(i, 5) * 0.08}>
+            <div className={`faq-item ${activeFAQ === faq.id ? 'active' : ''}`}>
+              <div className="faq-question" onClick={() => toggleFAQ(faq.id)}>
+                <h4>{faq.question}</h4>
+                <span className="faq-toggle">{activeFAQ === faq.id ? '−' : '+'}</span>
+              </div>
+              <div className="faq-answer">
+                <p>{faq.answer}</p>
+              </div>
             </div>
-            <div className="faq-answer">
-              <p>{faq.answer}</p>
-            </div>
-          </div>
+          </Reveal>
         ))}
       </div>
     </section>

@@ -1,17 +1,24 @@
 import React from 'react'
 import './SuggestionsSection.css'
+import Reveal from './Reveal'
 
 const SuggestionsSection = () => {
   return (
     <section className="section suggestions-section">
+      <span className="section-kicker">We're Listening</span>
       <h2 className="section-title">Your Suggestions Matter</h2>
-      
+      <div className="ornament">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10Z" />
+        </svg>
+      </div>
+
       <div className="suggestions-container">
-        <div className="suggestions-info">
+        <Reveal delay={0} as="div" className="suggestions-info">
           <div className="info-card">
             <h3>Share Your Thoughts</h3>
             <p>
-              We value your feedback and suggestions. Help us improve our resources 
+              We value your feedback and suggestions. Help us improve our resources
               and services by sharing your thoughts, ideas, and experiences.
             </p>
             <div className="suggestion-types">
@@ -25,9 +32,9 @@ const SuggestionsSection = () => {
               </ul>
             </div>
           </div>
-        </div>
+        </Reveal>
 
-        <div className="google-form-container">
+        <Reveal delay={0.15} as="div" className="google-form-container">
           <iframe
             src="https://docs.google.com/forms/d/e/1FAIpQLSea3N4kMUURtNnosC6Dl3DJLbcxivUlfZnxov5Vc7u6im6j5Q/viewform?embedded=true"
             title="Suggestions Form"
@@ -35,10 +42,10 @@ const SuggestionsSection = () => {
           >
             Loading…
           </iframe>
-        </div>
+        </Reveal>
       </div>
 
-      <div className="community-guidelines">
+      <Reveal as="div" className="community-guidelines">
         <h3>Community Guidelines</h3>
         <div className="guidelines-grid">
           <div className="guideline-card">
@@ -58,7 +65,7 @@ const SuggestionsSection = () => {
             <p>We review all suggestions and respond to important queries</p>
           </div>
         </div>
-      </div>
+      </Reveal>
     </section>
   )
 }
