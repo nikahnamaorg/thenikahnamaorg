@@ -168,7 +168,7 @@
    visible (cropping by height cuts off the figure at the top) */
 .about-nikahnama-image img {
   width: 100%;
-  max-width: 380px;
+  max-width: 330px;
   height: auto;
   display: block;
   margin: 0 auto;

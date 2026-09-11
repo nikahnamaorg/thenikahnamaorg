@@ -1,6 +1,6 @@
 import React from 'react'
 import './Header.css'
-import logo from './logo.png'   // logo inside components folder
+import logo from './logo-mark.jpeg'   // logo inside components folder
 
 const Header = ({ activeSection, onNavigate }) => {
   return (
@@ -8,7 +8,9 @@ const Header = ({ activeSection, onNavigate }) => {
       <div className="header-container">
 
         <div className="logo" onClick={() => onNavigate('home')}>
-          <img src={logo} alt="The Nikahnama Org Logo" className="logo-img" />
+          <span className="logo-mark">
+            <img src={logo} alt="The Nikahnama Org Logo" className="logo-img" />
+          </span>
 
           <div className="logo-text">
             <h1>The Nikahnama Org</h1>
