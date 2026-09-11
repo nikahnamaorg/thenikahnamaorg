@@ -4,6 +4,7 @@ import Reveal from './Reveal'
 
 const ClausesSection = () => {
   const [activeCategory, setActiveCategory] = useState('all')
+  const [selectedClause, setSelectedClause] = useState(null)
 
   const categories = [
     { id: 'all', name: 'All' },
@@ -116,10 +117,84 @@ const ClausesSection = () => {
 
   const filteredClauses = activeCategory === 'all' ? clauses : clauses.filter(c => c.category === activeCategory)
 
+  const openClause = (clause) => {
+    setSelectedClause(clause)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  const closeClause = () => {
+    setSelectedClause(null)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  // ---- Detail "page" for a single clause ----
+  if (selectedClause) {
+    return (
+      <section className="section clauses-section clause-detail-page">
+        <button className="back-link" onClick={closeClause}>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+          Back to all clauses
+        </button>
+
+        <span className="section-kicker">Know Before You Sign</span>
+        <h2 className="section-title">{selectedClause.title}</h2>
+        <div className="ornament">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13Z" />
+          </svg>
+        </div>
+
+        <div className="clause-detail">
+          <span className={`importance-badge ${selectedClause.importance.toLowerCase()}`}>
+            {selectedClause.importance} Importance
+          </span>
+          <p className="clause-description">{selectedClause.description}</p>
+
+          <div className="clause-content">
+            {selectedClause.content.split('\n').map((line, i) => <p key={i}>{line}</p>)}
+          </div>
+
+          {selectedClause.table && (
+            <div className="clause-table-wrap">
+              <table className="clause-table">
+                {selectedClause.table.caption && <caption>{selectedClause.table.caption}</caption>}
+                <thead>
+                  <tr>
+                    {selectedClause.table.headers.map((h, i) => <th key={i}>{h}</th>)}
+                  </tr>
+                </thead>
+                <tbody>
+                  {selectedClause.table.rows.map((row, i) => (
+                    <tr key={i}>
+                      {row.map((cell, j) => <td key={j}>{cell}</td>)}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+
+          {selectedClause.instaPost && (
+            <div className="clause-footer">
+              <a href={selectedClause.instaPost} target="_blank" rel="noopener noreferrer">View on Instagram</a>
+            </div>
+          )}
+        </div>
+
+        <div className="clause-detail-nav">
+          <button className="btn-secondary" onClick={closeClause}>Back to all clauses</button>
+        </div>
+      </section>
+    )
+  }
+
+  // ---- List of clauses ----
   return (
     <section className="section clauses-section">
       <span className="section-kicker">Know Before You Sign</span>
-      <h2 className="section-title">Nikahnama Clauses Explained</h2>
+      <h2 className="section-title">Clauses Explained</h2>
       <div className="ornament">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
           <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13Z" />
@@ -142,45 +217,23 @@ const ClausesSection = () => {
         <p className="clauses-empty">More clauses coming soon — check back shortly.</p>
       )}
 
-      <div className="clauses-grid">
+      <div className="clauses-list">
         {filteredClauses.map((clause, i) => (
-          <Reveal key={clause.id} delay={(i % 3) * 0.1}>
-            <div className="clause-card">
-              <div className="clause-header">
-                <h3>{clause.title}</h3>
+          <Reveal key={clause.id} delay={Math.min(i, 5) * 0.08}>
+            <button className="clause-row" onClick={() => openClause(clause)}>
+              <span className="clause-row-text">
+                <span className="clause-row-title">{clause.title}</span>
                 <span className={`importance-badge ${clause.importance.toLowerCase()}`}>
                   {clause.importance} Importance
                 </span>
-              </div>
-              <p className="clause-description">{clause.description}</p>
-              <div className="clause-content">
-                {clause.content.split('\n').map((line, i) => <p key={i}>{line}</p>)}
-              </div>
-              {clause.table && (
-                <div className="clause-table-wrap">
-                  <table className="clause-table">
-                    {clause.table.caption && <caption>{clause.table.caption}</caption>}
-                    <thead>
-                      <tr>
-                        {clause.table.headers.map((h, i) => <th key={i}>{h}</th>)}
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {clause.table.rows.map((row, i) => (
-                        <tr key={i}>
-                          {row.map((cell, j) => <td key={j}>{cell}</td>)}
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              )}
-              {clause.instaPost && (
-                <div className="clause-footer">
-                  <a href={clause.instaPost} target="_blank" rel="noopener noreferrer">📱 View on Instagram</a>
-                </div>
-              )}
-            </div>
+                <span className="clause-row-desc">{clause.description}</span>
+              </span>
+              <span className="clause-row-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M9 6l6 6-6 6" />
+                </svg>
+              </span>
+            </button>
           </Reveal>
         ))}
       </div>
@@ -188,7 +241,7 @@ const ClausesSection = () => {
       <Reveal>
         <div className="clauses-notes">
           <div className="note-card">
-            <h4>💡 Important Notes</h4>
+            <h4>Important Notes</h4>
             <ul>
               <li>All clauses must comply with Islamic principles</li>
               <li>Consult with a knowledgeable scholar before adding custom clauses</li>

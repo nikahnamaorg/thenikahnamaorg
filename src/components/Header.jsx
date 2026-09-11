@@ -42,7 +42,7 @@ const Header = ({ activeSection, onNavigate }) => {
             className={activeSection === 'clauses' ? 'nav-btn active' : 'nav-btn'}
             onClick={() => onNavigate('clauses')}
           >
-            Nikahnama Clauses
+            Clauses
           </button>
 
           <button 
