@@ -48,6 +48,12 @@ const Hero = ({ onNavigate }) => {
       </div>
 
       <div className="hero-content">
+        <Reveal as="div" className="hero-features-head">
+          <span className="section-kicker">Where To Begin</span>
+          <h2 className="section-title">What You'll Find Here</h2>
+          <div className="ornament"><ScaleIcon /></div>
+        </Reveal>
+
         <div className="hero-features">
           <Reveal delay={0}>
             <div className="feature-card" onClick={() => onNavigate('clauses')}>
