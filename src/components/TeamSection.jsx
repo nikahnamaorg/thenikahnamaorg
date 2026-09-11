@@ -37,21 +37,113 @@ const TeamSection = () => {
   const teamMembers = [
     {
       id: 1,
+      slug: "eeshal",
       name: "Eeshal Imran Akram",
       role: "Founder & CEO",
       description: "A Levels @ ISL",
       fullBio: "Eeshal Imran is an A-Level student at International School Lahore and founder of The Nikahnama Org, advocating for awareness of marital rights and social empowerment. She serves as HR Lead at Mojza and holds ambassador roles with ThinkFest’26, BOEC, Crimson, and ILC, leading outreach, communications, and youth engagement initiatives. Multilingual and skilled in outreach, digital marketing, and storytelling, Eeshal combines leadership with community impact to educate and empower others.",
-      image: "/images/eeshal.webp"
+      image: "/images/eeshal.webp",
+      education: ["A Levels — International School Lahore"],
+      roles: [
+        "Founder — The Nikahnama Org",
+        "HR Lead — Mojza",
+        "Ambassador — ThinkFest’26, BOEC, Crimson and ILC"
+      ],
+      skills: ["Outreach", "Digital Marketing", "Storytelling", "Communications", "Multilingual"]
     },
     {
       id: 2,
+      slug: "shiza",
       name: "Shiza Imtiaz",
       role: "Co-Founder & COO",
       description: "A Levels @ Lahore Alma",
       fullBio: "Shiza Imtiaz is an A-Level student at The Lahore Alma and co-founder of The Nikahnama Org, where she leads awareness campaigns on marital rights and gender equity. She also serves as an ambassador for ZNotes and has experience in research, creative marketing, and graphic design, combining creativity with strategic thinking to engage youth and promote social impact. Passionate about arts, storytelling, and education, Shiza is dedicated to fostering learning, awareness, and meaningful community initiatives.",
-      image: "/images/shiza.jpg"
+      image: "/images/shiza.jpg",
+      education: ["A Levels — The Lahore Alma"],
+      roles: [
+        "Co-Founder — The Nikahnama Org",
+        "Ambassador — ZNotes"
+      ],
+      skills: ["Research", "Creative Marketing", "Graphic Design", "Storytelling"]
     },
   ]
+
+  const openMember = (member) => {
+    setSelectedMember(member)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  const closeMember = () => {
+    setSelectedMember(null)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  // ---- Detail "page" for a single member ----
+  if (selectedMember) {
+    const m = selectedMember
+    return (
+      <section className="section team-section">
+        <button className="back-link" onClick={closeMember}>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+          Back to the team
+        </button>
+
+        <span className="section-kicker">The People Behind It</span>
+        <h2 className="section-title">{m.name}</h2>
+        <div className="ornament">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="12" cy="8" r="3.4" />
+            <path d="M5 20c0-3.9 3.1-7 7-7s7 3.1 7 7" />
+          </svg>
+        </div>
+
+        <div className="member-detail">
+          <div className="member-detail-head">
+            <img src={m.image} alt={m.name} />
+            <div>
+              <p className="team-role">{m.role}</p>
+              <p className="member-detail-sub">{m.description}</p>
+            </div>
+          </div>
+
+          <p className="member-bio">{m.fullBio}</p>
+
+          {m.education && m.education.length > 0 && (
+            <div className="member-block">
+              <h4>Education</h4>
+              <ul>
+                {m.education.map((e, i) => <li key={i}>{e}</li>)}
+              </ul>
+            </div>
+          )}
+
+          {m.roles && m.roles.length > 0 && (
+            <div className="member-block">
+              <h4>Roles &amp; Positions</h4>
+              <ul>
+                {m.roles.map((r, i) => <li key={i}>{r}</li>)}
+              </ul>
+            </div>
+          )}
+
+          {m.skills && m.skills.length > 0 && (
+            <div className="member-block">
+              <h4>Skills</h4>
+              <div className="member-skills">
+                {m.skills.map((sk, i) => <span key={i}>{sk}</span>)}
+              </div>
+            </div>
+          )}
+        </div>
+
+        <div className="clause-detail-nav">
+          <button className="btn-secondary" onClick={closeMember}>Back to the team</button>
+        </div>
+      </section>
+    )
+  }
 
   return (
     <section className="section team-section">
@@ -71,7 +163,7 @@ const TeamSection = () => {
           <Reveal key={member.id} delay={i * 0.1}>
             <div
               className="team-card"
-              onClick={() => setSelectedMember(member)}
+              onClick={() => openMember(member)}
             >
               <div className="team-image">
                 <img src={member.image} alt={member.name} />
@@ -80,29 +172,11 @@ const TeamSection = () => {
               <h3>{member.name}</h3>
               <p className="team-role">{member.role}</p>
               <p className="team-description">{member.description}</p>
+              <span className="team-view-more">View profile ›</span>
             </div>
           </Reveal>
         ))}
       </div>
-
-      {/* MODAL */}
-      {selectedMember && (
-        <div className="modal-overlay" onClick={() => setSelectedMember(null)}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-
-            <img src={selectedMember.image} alt={selectedMember.name} />
-
-            <h2>{selectedMember.name}</h2>
-            <p className="team-role">{selectedMember.role}</p>
-
-            <p className="modal-description">
-              {selectedMember.fullBio}
-            </p>
-
-            <button onClick={() => setSelectedMember(null)}>Close</button>
-          </div>
-        </div>
-      )}
 
       {/* MISSION */}
       <Reveal className="mission-section" as="div">

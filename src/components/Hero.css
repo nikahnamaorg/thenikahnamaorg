@@ -5,7 +5,7 @@
   overflow: hidden;
   /* fill what's left of the screen under the 102px sticky header, so the whole
      hero is framed on first load without scrolling */
-  min-height: calc(100vh - 102px);
+  min-height: min(calc(100vh - 210px), 560px);
   background-image:
     radial-gradient(circle at 1px 1px, rgba(91, 15, 9, 0.08) 1px, transparent 0);
   background-size: 26px 26px;
@@ -21,7 +21,7 @@
   gap: 50px;
   position: relative;
   z-index: 1;
-  min-height: calc(100vh - 162px);
+  min-height: min(calc(100vh - 270px), 500px);
 }
 
 .hero-top::before,
@@ -125,9 +125,7 @@
 }
 
 .hero-features-head {
-  /* the full-height hero leaves empty canvas under its content; pull the
-     heading up into it rather than stacking another gap on top */
-  margin-top: -130px;
+  margin-top: 36px;
 }
 
 .hero-features-head .section-title {
