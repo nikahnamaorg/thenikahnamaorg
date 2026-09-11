@@ -13,37 +13,44 @@ const SuggestionsSection = () => {
         </svg>
       </div>
 
-      <div className="suggestions-container">
-        <Reveal delay={0} as="div" className="suggestions-info">
-          <div className="info-card">
-            <h3>Share Your Thoughts</h3>
-            <p>
-              We value your feedback and suggestions. Help us improve our resources
-              and services by sharing your thoughts, ideas, and experiences.
-            </p>
-            <div className="suggestion-types">
-              <h4>You can suggest:</h4>
-              <ul>
-                <li>New clauses to explain</li>
-                <li>Improvements to our website</li>
-                <li>Topics for future discussions</li>
-                <li>Community events or workshops</li>
-                <li>Any other ideas to help our mission</li>
-              </ul>
-            </div>
-          </div>
-        </Reveal>
+      <Reveal as="div" className="suggestions-intro">
+        <p>
+          We value your feedback. Help us improve our resources by sharing your thoughts,
+          ideas, and experiences — it's completely anonymous unless you choose to leave
+          your email.
+        </p>
+        <div className="suggestion-chips">
+          <span>New clauses to explain</span>
+          <span>Improvements to our website</span>
+          <span>Topics for future discussions</span>
+          <span>Community events or workshops</span>
+          <span>Any other ideas</span>
+        </div>
+      </Reveal>
 
-        <Reveal delay={0.15} as="div" className="google-form-container">
-          <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSea3N4kMUURtNnosC6Dl3DJLbcxivUlfZnxov5Vc7u6im6j5Q/viewform?embedded=true"
-            title="Suggestions Form"
-            className="google-form-iframe"
+      <Reveal delay={0.1} as="div" className="google-form-container">
+        <div className="google-form-head">
+          <h3>Suggestions Form</h3>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSea3N4kMUURtNnosC6Dl3DJLbcxivUlfZnxov5Vc7u6im6j5Q/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="form-open-link"
           >
-            Loading…
-          </iframe>
-        </Reveal>
-      </div>
+            Open in a new tab
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M14 4h6v6M20 4l-8 8M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" />
+            </svg>
+          </a>
+        </div>
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSea3N4kMUURtNnosC6Dl3DJLbcxivUlfZnxov5Vc7u6im6j5Q/viewform?embedded=true"
+          title="Suggestions Form"
+          className="google-form-iframe"
+        >
+          Loading…
+        </iframe>
+      </Reveal>
 
       <Reveal as="div" className="community-guidelines">
         <h3>Community Guidelines</h3>
