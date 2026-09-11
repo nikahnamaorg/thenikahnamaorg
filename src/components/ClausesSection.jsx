@@ -112,6 +112,37 @@ const ClausesSection = () => {
       },
       importance: "High",
       instaPost: ""
+    },
+    {
+      id: 7,
+      title: "Clause 7 — The Wakeel",
+      category: "marriage",
+      description: "The trusted representative who can speak or act on your behalf during the Nikah.",
+      content:
+        "Every new journey benefits from someone you trust. Clause 7 is about the Wakeel — a representative who may be appointed by the bride, or in some situations by the groom, to speak or act on their behalf during the Nikah.\n" +
+        "Having a Wakeel isn't compulsory in every Nikah. But if one is appointed, this clause records their details: the name of the Wakeel, their father's name, and their residence.\n" +
+        "A Wakeel is simply a trusted representative, appointed to represent the bride or the groom during the Nikah and act according to the authority given to them. A Wali can appoint a Wakeel if he cannot be present at the time of the Nikah. Depending on the opinion being followed, the Wakeel may be a mahram or a non-mahram, although many scholars have traditionally preferred a trustworthy Muslim male.\n" +
+        "The purpose of a Wakeel is to make sure the marriage contract is properly represented, witnessed, and recorded. The bride may appoint one to represent her during the Nikah, and the groom may also appoint one to accept the marriage contract on his behalf if he cannot be present.\n" +
+        "Importantly, a Wakeel only speaks on behalf of the person who appointed them.\n" +
+        "Why is the father's name and residence recorded? Because many people share the same name — these details help identify the Wakeel clearly, avoid confusion, and make the Nikah record complete. Recording this also makes future verification easier if the document is ever needed, keeping the marriage record accurate, transparent, and properly documented from the very beginning.",
+      importance: "Medium",
+      instaPost: ""
+    },
+    {
+      id: 8,
+      title: "Clause 8 — Witnesses to the Appointment",
+      category: "rights",
+      description: "The people who witnessed the bride appointing a Wakeel — proof the choice was her own.",
+      content:
+        "Marriage is a lifelong commitment that begins with trust, and trust begins with clarity. Some of the most important decisions in life should be witnessed and remembered.\n" +
+        "Clause 8 records the details of the people who witnessed the bride appointing a Wakeel, if one is chosen. It's a small part of the Nikahnama that keeps an important decision clear, well documented, and easy to verify.\n" +
+        "Not every Nikah needs a Wakeel. If the bride gives her consent herself, Clause 8 is usually left blank. But if she chooses a trusted person to represent her, this clause records the witnesses who saw that appointment.\n" +
+        "A Wakeel is a trusted person chosen by the bride to represent her during the Nikah. They only act with her permission and according to her wishes. For example, if a bride is living overseas and cannot attend her Nikah, she may appoint a trusted Wakeel to represent her.\n" +
+        "A trusted decision requires trusted witnesses. The witnesses observe the bride appointing her Wakeel and help confirm that it was her own decision, made willingly and with her permission. Their presence adds confidence to the process and helps protect the accuracy of the Nikah record if it ever needs to be verified.\n" +
+        "Clause 8 records the witnesses' names, their fathers' names, places of residence, and their relationship with the bride. These details help identify the right people, create a complete record of the appointment, and preserve trust in one of life's most important commitments. If questions ever arise, this information provides clarity and avoids unnecessary confusion.\n" +
+        "Clause 8 is more than a space to fill in names. When a Wakeel is appointed, this clause supports clarity, proper documentation, and confidence in the Nikah record. Every detail has a purpose, because every detail helps preserve the trust with which the marriage begins.",
+      importance: "Medium",
+      instaPost: ""
     }
   ]
 
