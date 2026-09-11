@@ -38,6 +38,13 @@
   color: var(--cream);
 }
 
+.clauses-empty {
+  text-align: center;
+  color: var(--ink-light);
+  font-style: italic;
+  margin-bottom: 50px;
+}
+
 .clauses-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));

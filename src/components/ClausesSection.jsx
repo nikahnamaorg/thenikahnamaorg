@@ -14,10 +14,16 @@ const ClausesSection = () => {
   const clauses = [
     {
       id: 1,
-      title: "Example Clause",
+      title: "Clause 1 — Where It All Begins",
       category: "marriage",
-      description: "Short explanation of the clause.",
-      content: "Full content of the clause.\nMultiple lines supported.",
+      description: "The legal pin drop — the official starting point your whole marriage is mapped from.",
+      content:
+        "Every love story has a setting — and in legal terms, Clause 1 of your Nikahnama is exactly that. It's the official starting point, the pin your entire marriage is mapped from. It grounds your commitment in reality, aligns your documents, and protects your rights, now and for the future.\n" +
+        "What it covers: Ward/Town/City, Union Council, Tehsil/Thana, District, Date of Marriage, and the name of the Nikah Registrar.\n" +
+        "It's your legal location tag — with no Clause 1, there's no official record and no proof your marriage even happened. From CNICs to passports, everything traces back here, and courts, councils, and embassies all need it to do anything. Without it, your case is basically a ghost file.\n" +
+        "It also protects your future kids' legal identity, nationality, and rights, and it's your answer if anyone ever tries to claim the marriage never existed. In a world of digital documents and red tape, this one line keeps your marriage valid, visible, and very real.\n" +
+        "This clause also identifies exactly which Nikah Registrar and Union Council were responsible for officiating and registering your marriage — proving your marriage is valid and officially recognised under the Muslim Family Laws Ordinance, 1961, and securing your marital status for inheritance, pension, or other legal claims later on.\n" +
+        "Marriage isn't just an emotional bond — it's a legal relationship that deserves care, clarity, and consent at every step. Clause 1 may feel like a formality, but it's one of the first bricks in the legal house you're building together. Make it count.",
       importance: "High",
       instaPost: ""
     }
@@ -46,6 +52,10 @@ const ClausesSection = () => {
           </button>
         ))}
       </div>
+
+      {filteredClauses.length === 0 && (
+        <p className="clauses-empty">More clauses coming soon — check back shortly.</p>
+      )}
 
       <div className="clauses-grid">
         {filteredClauses.map((clause, i) => (
