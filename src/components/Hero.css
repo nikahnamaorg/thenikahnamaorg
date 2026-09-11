@@ -12,7 +12,7 @@
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-columns: 1.45fr 0.55fr;
   align-items: center;
   gap: 50px;
   position: relative;
@@ -47,7 +47,7 @@
   background: var(--maroon-tint);
   /* uneven corner radii read as hand-torn paper rather than a plain box */
   border-radius: 14px 40px 18px 34px;
-  padding: 46px 48px;
+  padding: 54px 58px;
   box-shadow: 0 14px 34px rgba(91, 15, 9, 0.12);
 }
 
@@ -58,7 +58,7 @@
 }
 
 .hero-text h1 {
-  font-size: clamp(2.1rem, 4.2vw, 3.3rem);
+  font-size: clamp(2.3rem, 4.6vw, 3.75rem);
   color: var(--maroon);
   margin-bottom: 18px;
   line-height: 1.15;
@@ -80,7 +80,7 @@
 }
 
 .hero-subtitle {
-  font-size: 1.08rem;
+  font-size: 1.16rem;
   color: var(--maroon-dark);
   opacity: 0.85;
   margin: 0 0 34px;
@@ -93,14 +93,14 @@
   flex-wrap: wrap;
 }
 
+/* No frame or shadow — the illustration's own background (#c1b295) is within a
+   couple of values of --canvas (#c3b696), so it blends on its own. A blend mode
+   here would only darken it and make the rectangle visible. */
 .hero-illustration img {
   display: block;
   width: 100%;
-  max-width: 480px;
+  max-width: 360px;
   margin-left: auto;
-  border-radius: 10px;
-  border: 1px solid rgba(91, 15, 9, 0.18);
-  box-shadow: 0 16px 40px rgba(91, 15, 9, 0.18);
 }
 
 .hero-content {
