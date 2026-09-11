@@ -88,8 +88,8 @@ const Hero = ({ onNavigate }) => {
           </Reveal>
           <Reveal delay={0.15} className="about-nikahnama-image" as="div">
             <img
-              src="/images/nikahnama-instagram-post.jpg"
-              alt="Quote card: 'The Nikahnama is a contract containing rights of the parties; the courts of Pakistan have made this abundantly clear.' — Justice Jawad Hassan, Lahore High Court"
+              src="/images/nikahnama-hero.jpeg"
+              alt="Marble sculpture of a woman carving her way out of a clenched fist"
             />
           </Reveal>
         </div>

@@ -164,20 +164,22 @@
   margin-top: 8px;
 }
 
+/* portrait artwork (2:3) — width-capped only, so the whole sculpture stays
+   visible (cropping by height cuts off the figure at the top) */
 .about-nikahnama-image img {
   width: 100%;
-  max-width: 420px;
+  max-width: 380px;
+  height: auto;
   display: block;
   margin: 0 auto;
-  border-radius: 18px;
-  box-shadow: 0 20px 46px rgba(91, 15, 9, 0.28);
-  border: 6px solid var(--cream-soft);
-  transform: rotate(1.5deg);
+  border-radius: 16px;
+  box-shadow: 0 20px 46px rgba(91, 15, 9, 0.3);
+  border: 5px solid var(--cream-soft);
   transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .about-nikahnama-image img:hover {
-  transform: rotate(0deg) scale(1.02);
+  transform: scale(1.02);
 }
 
 @media (max-width: 900px) {
