@@ -1,6 +1,6 @@
 .hero-top {
   background: var(--canvas);
-  padding: 0 20px 60px;
+  padding: 0 20px 24px;
   position: relative;
   overflow: hidden;
   /* fill what's left of the screen under the 102px sticky header, so the whole
@@ -125,7 +125,9 @@
 }
 
 .hero-features-head {
-  margin-top: 76px;
+  /* the full-height hero leaves empty canvas under its content; pull the
+     heading up into it rather than stacking another gap on top */
+  margin-top: -130px;
 }
 
 .hero-features-head .section-title {
@@ -186,6 +188,10 @@
   margin: 110px 0 40px;
 }
 
+.about-nikahnama-text {
+  padding-left: 38px;
+}
+
 .about-nikahnama-text .section-kicker {
   text-align: left;
   margin-bottom: 0.6rem;
@@ -217,15 +223,19 @@
   max-width: 330px;
   height: auto;
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 0 auto;
+  transform: translateX(26px) rotate(2.5deg);
   border-radius: 16px;
   box-shadow: 0 20px 46px rgba(91, 15, 9, 0.3);
   border: 5px solid var(--cream-soft);
-  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.55s ease;
 }
 
+/* straightens and lifts as you hover */
 .about-nikahnama-image img:hover {
-  transform: scale(1.02);
+  transform: translateX(26px) rotate(0deg) scale(1.04);
+  box-shadow: 0 28px 60px rgba(91, 15, 9, 0.36);
 }
 
 @media (max-width: 900px) {
@@ -236,9 +246,21 @@
     margin-top: 80px;
   }
 
+  .about-nikahnama-text {
+    padding-left: 0;
+  }
+
   .about-nikahnama-text .section-kicker,
   .about-nikahnama-text h2 {
     text-align: center;
+  }
+
+  .about-nikahnama-image img {
+    transform: rotate(2.5deg);
+  }
+
+  .about-nikahnama-image img:hover {
+    transform: rotate(0deg) scale(1.04);
   }
 
   .about-nikahnama-image {
@@ -256,6 +278,10 @@
     min-height: 0;
     grid-template-columns: 1fr;
     gap: 36px;
+  }
+
+  .hero-features-head {
+    margin-top: 24px;
   }
 
   /* drop the indent as soon as it stacks, or the text sits off-centre
