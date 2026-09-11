@@ -2,10 +2,6 @@
   background: var(--canvas);
 }
 
-.team-section .ornament {
-  margin-bottom: 3.2rem;
-}
-
 /* ================= MISSION ================= */
 
 .mission-section {
@@ -116,7 +112,7 @@
 }
 
 .team-role {
-  color: var(--gold);
+  color: var(--gold-deep);
   font-weight: bold;
   margin-bottom: 14px;
   font-size: 1.02rem;

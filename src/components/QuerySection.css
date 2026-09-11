@@ -2,10 +2,6 @@
   background: var(--canvas);
 }
 
-.query-section .ornament {
-  margin-bottom: 3.2rem;
-}
-
 .faq-list {
   max-width: 800px;
   margin: 0 auto 40px;

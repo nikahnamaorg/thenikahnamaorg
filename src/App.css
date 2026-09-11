@@ -11,6 +11,8 @@
   --cream-soft: #efe4d3;
   --gold: #c9a24c;
   --gold-soft: #e3cf9e;
+  /* darker gold for text sitting on light backgrounds, where --gold washes out */
+  --gold-deep: #94701f;
   --ink: #2b1410;
   --ink-light: #6b5850;
 
@@ -136,7 +138,7 @@ a {
 }
 
 .section {
-  padding: 90px 20px;
+  padding: 48px 20px 80px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -145,20 +147,20 @@ a {
   text-align: center;
   color: var(--maroon);
   font-size: clamp(2rem, 4vw, 2.7rem);
-  margin-bottom: 1.1rem;
+  margin-bottom: 0.8rem;
   letter-spacing: 0.01em;
 }
 
 .section-kicker {
   display: block;
   text-align: center;
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   text-transform: uppercase;
-  letter-spacing: 0.25em;
-  font-size: 0.75rem;
-  color: var(--gold);
+  letter-spacing: 0.14em;
+  font-size: 0.86rem;
+  color: var(--maroon);
   font-weight: 600;
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.7rem;
 }
 
 /* Small gold ornament used under section titles, in place of a plain bar */
@@ -167,8 +169,8 @@ a {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin: 0 auto 3.2rem;
-  color: var(--gold);
+  margin: 0 auto 2rem;
+  color: var(--gold-deep);
   width: fit-content;
 }
 
@@ -177,11 +179,11 @@ a {
   content: '';
   width: 44px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--gold));
+  background: linear-gradient(90deg, transparent, var(--gold-deep));
 }
 
 .ornament::after {
-  background: linear-gradient(90deg, var(--gold), transparent);
+  background: linear-gradient(90deg, var(--gold-deep), transparent);
 }
 
 .ornament svg {
@@ -206,7 +208,7 @@ a {
 
 @media (max-width: 768px) {
   .section {
-    padding: 64px 20px;
+    padding: 36px 20px 60px;
   }
 
   .section-title {

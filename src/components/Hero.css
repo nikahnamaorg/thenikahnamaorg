@@ -51,17 +51,17 @@
 }
 
 .hero-text .ornament {
-  color: var(--gold);
+  color: var(--gold-deep);
   margin-bottom: 28px;
 }
 
 .hero-text .ornament::before,
 .hero-text .ornament::after {
-  background: linear-gradient(90deg, transparent, var(--gold));
+  background: linear-gradient(90deg, transparent, var(--gold-deep));
 }
 
 .hero-text .ornament::after {
-  background: linear-gradient(90deg, var(--gold), transparent);
+  background: linear-gradient(90deg, var(--gold-deep), transparent);
 }
 
 .hero-subtitle {

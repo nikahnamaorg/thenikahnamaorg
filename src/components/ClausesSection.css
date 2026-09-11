@@ -2,10 +2,6 @@
   background: var(--canvas);
 }
 
-.clauses-section .ornament {
-  margin-bottom: 3.2rem;
-}
-
 .categories-filter {
   display: flex;
   justify-content: center;
@@ -211,7 +207,7 @@
 }
 
 .clause-description {
-  color: var(--gold);
+  color: var(--gold-deep);
   font-style: italic;
   margin-bottom: 20px;
   font-size: 1.05rem;

@@ -2,10 +2,6 @@
   background: var(--canvas);
 }
 
-.suggestions-section .ornament {
-  margin-bottom: 3.2rem;
-}
-
 .suggestions-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
