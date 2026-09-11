@@ -1,12 +1,22 @@
 .hero-top {
   background: var(--canvas);
-  padding: 90px 20px 100px;
-  text-align: center;
+  padding: 70px 20px 90px;
   position: relative;
   overflow: hidden;
   background-image:
     radial-gradient(circle at 1px 1px, rgba(91, 15, 9, 0.08) 1px, transparent 0);
   background-size: 26px 26px;
+}
+
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 50px;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-top::before,
@@ -31,19 +41,24 @@
 }
 
 .hero-text {
-  max-width: 720px;
-  margin: 0 auto;
   position: relative;
   z-index: 1;
+  text-align: left;
+  background: var(--maroon-tint);
+  /* uneven corner radii read as hand-torn paper rather than a plain box */
+  border-radius: 14px 40px 18px 34px;
+  padding: 46px 48px;
+  box-shadow: 0 14px 34px rgba(91, 15, 9, 0.12);
 }
 
 .hero-text .section-kicker {
   color: var(--maroon);
   opacity: 0.85;
+  text-align: left;
 }
 
 .hero-text h1 {
-  font-size: clamp(2.6rem, 6vw, 4rem);
+  font-size: clamp(2.1rem, 4.2vw, 3.3rem);
   color: var(--maroon);
   margin-bottom: 18px;
   line-height: 1.15;
@@ -52,7 +67,7 @@
 
 .hero-text .ornament {
   color: var(--gold-deep);
-  margin-bottom: 28px;
+  margin: 0 0 28px;
 }
 
 .hero-text .ornament::before,
@@ -65,18 +80,27 @@
 }
 
 .hero-subtitle {
-  font-size: 1.15rem;
-  color: var(--ink-light);
-  max-width: 620px;
-  margin: 0 auto 40px;
+  font-size: 1.08rem;
+  color: var(--maroon-dark);
+  opacity: 0.85;
+  margin: 0 0 34px;
   line-height: 1.7;
 }
 
 .hero-buttons {
   display: flex;
-  gap: 18px;
-  justify-content: center;
+  gap: 16px;
   flex-wrap: wrap;
+}
+
+.hero-illustration img {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  margin-left: auto;
+  border-radius: 10px;
+  border: 1px solid rgba(91, 15, 9, 0.18);
+  box-shadow: 0 16px 40px rgba(91, 15, 9, 0.18);
 }
 
 .hero-content {
@@ -90,7 +114,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  margin-top: -56px;
+  margin-top: 24px;
   position: relative;
   z-index: 2;
 }
@@ -200,9 +224,25 @@
   }
 }
 
+@media (max-width: 980px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .hero-illustration img {
+    margin: 0 auto;
+    max-width: 380px;
+  }
+}
+
 @media (max-width: 768px) {
   .hero-top {
-    padding: 64px 20px 88px;
+    padding: 48px 20px 80px;
+  }
+
+  .hero-text {
+    padding: 32px 26px;
   }
 
   .hero-subtitle {

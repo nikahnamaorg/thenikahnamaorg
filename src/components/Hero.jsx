@@ -12,28 +12,37 @@ const Hero = ({ onNavigate }) => {
   return (
     <section className="hero">
       <div className="hero-top">
-        <div className="hero-text">
-          <span className="section-kicker">A Youth-Led Initiative</span>
-          <h1>The NikahNama Org</h1>
-          <div className="ornament"><ScaleIcon /></div>
-          <p className="hero-subtitle">
-            Simplifying the clauses of the Nikah Nama and raising awareness about the traditions,
-            rituals, and cultural practices surrounding it — enabling young people to make
-            informed and responsible decisions.
-          </p>
-          <div className="hero-buttons">
-            <button
-              className="btn-primary"
-              onClick={() => onNavigate('clauses')}
-            >
-              Explore Clauses
-            </button>
-            <button
-              className="btn-secondary"
-              onClick={() => onNavigate('queries')}
-            >
-              Ask Questions
-            </button>
+        <div className="hero-inner">
+          <div className="hero-text">
+            <span className="section-kicker">A Youth-Led Initiative</span>
+            <h1>The NikahNama Org</h1>
+            <div className="ornament"><ScaleIcon /></div>
+            <p className="hero-subtitle">
+              Simplifying the clauses of the Nikah Nama and raising awareness about the traditions,
+              rituals, and cultural practices surrounding it — enabling young people to make
+              informed and responsible decisions.
+            </p>
+            <div className="hero-buttons">
+              <button
+                className="btn-primary"
+                onClick={() => onNavigate('clauses')}
+              >
+                Explore Clauses
+              </button>
+              <button
+                className="btn-secondary"
+                onClick={() => onNavigate('queries')}
+              >
+                Ask Questions
+              </button>
+            </div>
+          </div>
+
+          <div className="hero-illustration">
+            <img
+              src="/images/hero-illustration.jpeg"
+              alt="Illustration of a woman tangled in red tape being cut free, with the scales of justice behind her"
+            />
           </div>
         </div>
       </div>
