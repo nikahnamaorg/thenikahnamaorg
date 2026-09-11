@@ -1,14 +1,20 @@
 .hero-top {
   background: var(--canvas);
-  padding: 70px 20px 90px;
+  padding: 80px 20px;
   position: relative;
   overflow: hidden;
+  /* fill what's left of the screen under the 102px sticky header, so the whole
+     hero is framed on first load without scrolling */
+  min-height: calc(100vh - 102px);
+  display: flex;
+  align-items: center;
   background-image:
     radial-gradient(circle at 1px 1px, rgba(91, 15, 9, 0.08) 1px, transparent 0);
   background-size: 26px 26px;
 }
 
 .hero-inner {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
@@ -45,7 +51,6 @@
   z-index: 1;
   text-align: left;
   padding-left: 38px;
-  margin-top: -22px;
 }
 
 .hero-text .section-kicker {
@@ -92,11 +97,6 @@
 /* No frame or shadow — the illustration's own background (#c1b295) is within a
    couple of values of --canvas (#c3b696), so it blends on its own. A blend mode
    here would only darken it and make the rectangle visible. */
-.hero-illustration {
-  /* sits a little above the text's vertical centre */
-  margin-top: -38px;
-}
-
 .hero-illustration img {
   display: block;
   width: 100%;
@@ -234,6 +234,11 @@
 }
 
 @media (max-width: 980px) {
+  .hero-top {
+    min-height: 0;
+    display: block;
+  }
+
   .hero-inner {
     grid-template-columns: 1fr;
     gap: 36px;
@@ -243,11 +248,6 @@
      against the centred illustration */
   .hero-text {
     padding-left: 0;
-    margin-top: 0;
-  }
-
-  .hero-illustration {
-    margin-top: 0;
   }
 
   .hero-illustration img {
