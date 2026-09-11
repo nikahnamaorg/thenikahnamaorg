@@ -18,43 +18,70 @@
   border: 1px solid rgba(201, 162, 76, 0.35);
 }
 
-.mission-card h3 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: var(--cream);
+.mission-kicker {
+  display: block;
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 14px;
 }
 
-.mission-card p {
-  font-size: 1.15rem;
-  line-height: 1.7;
-  margin-bottom: 30px;
-  opacity: 0.92;
+.mission-vision {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+  line-height: 1.55;
+  max-width: 780px;
+  margin: 0 auto 44px;
+  color: var(--cream);
 }
 
 .values-list h4 {
   color: var(--gold);
-  margin-bottom: 15px;
-  font-size: 1.25rem;
+  margin-bottom: 22px;
+  font-size: 1.15rem;
+  letter-spacing: 0.03em;
 }
 
-.values-list ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 14px;
-  padding: 0;
-}
-
-.values-list li {
-  background: rgba(246, 238, 225, 0.08);
-  padding: 11px 20px;
-  border-radius: 999px;
-  border: 1px solid rgba(201, 162, 76, 0.3);
-  font-size: 0.92rem;
-  max-width: 320px;
+/* Values are short paragraphs, not labels — cards with a heading, never pills */
+.values-grid {
+  display: grid;
+  /* four values — a 2x2 keeps them balanced instead of orphaning the last one */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
   text-align: left;
-  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.value-card {
+  background: rgba(246, 238, 225, 0.07);
+  border: 1px solid rgba(201, 162, 76, 0.28);
+  border-radius: 12px;
+  padding: 22px 24px;
+}
+
+.value-card h5 {
+  font-family: var(--font-display);
+  color: var(--gold);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+
+.value-card p {
+  color: var(--cream);
+  font-size: 0.94rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin: 0;
 }
 
 /* ================= TEAM ================= */
@@ -142,29 +169,41 @@
 
 .stand-for-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
 }
 
 .stand-card {
+  height: 100%;
   background: var(--cream);
-  padding: 26px;
+  padding: 24px 26px;
   border-radius: 12px;
-  text-align: center;
+  text-align: left;
   box-shadow: 0 6px 18px rgba(91, 15, 9, 0.08);
-  transition: transform 0.3s ease;
-  border-top: 2px solid var(--maroon);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 3px solid var(--gold);
 }
 
 .stand-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 26px rgba(91, 15, 9, 0.16);
 }
 
-.stand-card h4 {
-  color: var(--maroon);
-  font-size: 1.05rem;
-  font-weight: 600;
-  line-height: 1.5;
+.stand-num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gold-deep);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.stand-card p {
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -172,11 +211,6 @@
 @media (max-width: 768px) {
   .mission-card {
     padding: 30px 20px;
-  }
-
-  .values-list ul {
-    flex-direction: column;
-    align-items: center;
   }
 
   .what-we-stand-for {

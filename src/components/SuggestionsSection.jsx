@@ -2,6 +2,13 @@ import React from 'react'
 import './SuggestionsSection.css'
 import Reveal from './Reveal'
 
+const guidelines = [
+  { title: "Respectful", text: "Please maintain respect and courtesy in all communications." },
+  { title: "Confidential", text: "Your suggestions are confidential and will be reviewed carefully." },
+  { title: "Constructive", text: "We appreciate constructive feedback that helps us improve." },
+  { title: "Responsive", text: "We review all suggestions and respond to important queries." }
+]
+
 const SuggestionsSection = () => {
   return (
     <section className="section suggestions-section">
@@ -55,22 +62,12 @@ const SuggestionsSection = () => {
       <Reveal as="div" className="community-guidelines">
         <h3>Community Guidelines</h3>
         <div className="guidelines-grid">
-          <div className="guideline-card">
-            <h4>🤝 Respectful</h4>
-            <p>Please maintain respect and courtesy in all communications</p>
-          </div>
-          <div className="guideline-card">
-            <h4>🔒 Confidential</h4>
-            <p>Your suggestions are confidential and will be reviewed carefully</p>
-          </div>
-          <div className="guideline-card">
-            <h4>💡 Constructive</h4>
-            <p>We appreciate constructive feedback that helps us improve</p>
-          </div>
-          <div className="guideline-card">
-            <h4>⏰ Responsive</h4>
-            <p>We review all suggestions and respond to important queries</p>
-          </div>
+          {guidelines.map((g, i) => (
+            <div className="guideline-card" key={i}>
+              <h4>{g.title}</h4>
+              <p>{g.text}</p>
+            </div>
+          ))}
         </div>
       </Reveal>
     </section>

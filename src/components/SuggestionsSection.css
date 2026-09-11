@@ -97,48 +97,53 @@
 }
 
 .community-guidelines {
+  max-width: 900px;
+  margin: 0 auto;
   background: var(--cream-soft);
   padding: 44px 40px;
   border-radius: 18px;
+  border-top: 3px solid var(--gold);
 }
 
 .community-guidelines h3 {
   text-align: center;
   color: var(--maroon);
-  margin-bottom: 40px;
-  font-size: 1.9rem;
+  margin-bottom: 34px;
+  font-size: 1.7rem;
 }
 
 .guidelines-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 24px;
+  /* four guidelines — 2x2 so the last one isn't orphaned on its own row */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px 36px;
 }
 
 .guideline-card {
-  background: var(--cream);
-  padding: 25px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 6px 18px rgba(91, 15, 9, 0.08);
-  transition: transform 0.3s ease;
-  border-top: 2px solid var(--maroon);
+  padding: 18px 0 18px 18px;
+  border-left: 2px solid var(--gold);
+  background: none;
+  border-radius: 0;
+  text-align: left;
+  transition: border-left-color 0.3s ease;
 }
 
 .guideline-card:hover {
-  transform: translateY(-5px);
+  border-left-color: var(--maroon);
 }
 
 .guideline-card h4 {
   color: var(--maroon);
-  margin-bottom: 12px;
-  font-size: 1.1rem;
+  margin-bottom: 6px;
+  font-size: 1.08rem;
+  letter-spacing: 0.02em;
 }
 
 .guideline-card p {
   color: var(--ink-light);
-  line-height: 1.55;
+  line-height: 1.6;
   font-size: 0.95rem;
+  margin: 0;
 }
 
 @media (max-width: 768px) {
@@ -156,6 +161,6 @@
 
   .guidelines-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 10px;
   }
 }

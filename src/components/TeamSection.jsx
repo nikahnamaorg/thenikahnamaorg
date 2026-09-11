@@ -5,12 +5,31 @@ import Reveal from './Reveal'
 const mission = {
   vision: "Our mission is to educate communities about the Nikahnama, promote understanding of its legal and spiritual importance, and share real stories that raise the voices of the unheard.",
   values: [
-    "Accountability: We believe that those who suppress others or deny them their rightful freedoms should be brought to justice under the light of the law.",
-    "Empowerment: Our mission includes empowering those who feel weak or unheard, helping them find the confidence to speak up and stand for their rights.",
-    "Enlightenment: We strive to educate people about the Nikahnama, its clauses and the truths often buried by those who misuse power.",
-    "Transparency: We are committed to sharing facts that are honest and unaltered. Transparency is our utmost priority."
+    {
+      title: "Accountability",
+      text: "Those who suppress others or deny them their rightful freedoms should be brought to justice under the light of the law."
+    },
+    {
+      title: "Empowerment",
+      text: "We help those who feel weak or unheard find the confidence to speak up and stand for their rights."
+    },
+    {
+      title: "Enlightenment",
+      text: "We educate people about the Nikahnama, its clauses, and the truths often buried by those who misuse power."
+    },
+    {
+      title: "Transparency",
+      text: "We share facts that are honest and unaltered. Transparency is our utmost priority."
+    }
   ]
 }
+
+const coverage = [
+  "The difference between law, culture, and religion",
+  "Traditions and rituals still practiced today, and how they impact lives",
+  "Marital rights — mehr, divorce, custody, maintenance, delegated divorce",
+  "Consent, legal protections, and communication"
+]
 
 const TeamSection = () => {
   const [selectedMember, setSelectedMember] = useState(null)
@@ -88,16 +107,19 @@ const TeamSection = () => {
       {/* MISSION */}
       <Reveal className="mission-section" as="div">
         <div className="mission-card">
-          <h3>Our Mission</h3>
-          <p>{mission.vision}</p>
+          <span className="mission-kicker">Our Mission</span>
+          <p className="mission-vision">{mission.vision}</p>
 
           <div className="values-list">
             <h4>Our Values</h4>
-            <ul>
+            <div className="values-grid">
               {mission.values.map((value, index) => (
-                <li key={index}>{value}</li>
+                <div className="value-card" key={index}>
+                  <h5>{value.title}</h5>
+                  <p>{value.text}</p>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
       </Reveal>
@@ -106,10 +128,14 @@ const TeamSection = () => {
       <div className="what-we-stand-for">
         <h3>What We Cover</h3>
         <div className="stand-for-grid">
-          <Reveal delay={0}><div className="stand-card"><h4>The difference between law, culture, and religion.</h4></div></Reveal>
-          <Reveal delay={0.1}><div className="stand-card"><h4>Traditions and rituals still practiced today, and how they impact lives</h4></div></Reveal>
-          <Reveal delay={0.2}><div className="stand-card"><h4>Marital rights (mehr, divorce, custody, maintenance, delegated divorce)</h4></div></Reveal>
-          <Reveal delay={0.3}><div className="stand-card"><h4>Consent, legal protections, communication</h4></div></Reveal>
+          {coverage.map((item, i) => (
+            <Reveal delay={i * 0.08} key={i}>
+              <div className="stand-card">
+                <span className="stand-num">{String(i + 1).padStart(2, '0')}</span>
+                <p>{item}</p>
+              </div>
+            </Reveal>
+          ))}
         </div>
       </div>
 
