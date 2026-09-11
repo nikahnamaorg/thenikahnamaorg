@@ -12,7 +12,7 @@
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.45fr 0.55fr;
+  grid-template-columns: 1.2fr 0.8fr;
   align-items: center;
   gap: 50px;
   position: relative;
@@ -44,11 +44,7 @@
   position: relative;
   z-index: 1;
   text-align: left;
-  background: var(--maroon-tint);
-  /* uneven corner radii read as hand-torn paper rather than a plain box */
-  border-radius: 14px 40px 18px 34px;
-  padding: 54px 58px;
-  box-shadow: 0 14px 34px rgba(91, 15, 9, 0.12);
+  padding-left: 38px;
 }
 
 .hero-text .section-kicker {
@@ -81,8 +77,7 @@
 
 .hero-subtitle {
   font-size: 1.16rem;
-  color: var(--maroon-dark);
-  opacity: 0.85;
+  color: var(--ink-light);
   margin: 0 0 34px;
   line-height: 1.7;
 }
@@ -96,11 +91,24 @@
 /* No frame or shadow — the illustration's own background (#c1b295) is within a
    couple of values of --canvas (#c3b696), so it blends on its own. A blend mode
    here would only darken it and make the rectangle visible. */
+.hero-illustration {
+  /* sits a little above the text's vertical centre */
+  margin-top: -38px;
+}
+
 .hero-illustration img {
   display: block;
   width: 100%;
-  max-width: 360px;
+  max-width: 385px;
   margin-left: auto;
+  /* feather the edges so the rectangle dissolves into the canvas instead of
+     showing a hard boundary */
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 5%, #000 95%, transparent 100%),
+    linear-gradient(to bottom, transparent 0, #000 4%, #000 96%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(to right, transparent 0, #000 5%, #000 95%, transparent 100%),
+    linear-gradient(to bottom, transparent 0, #000 4%, #000 96%, transparent 100%);
+  mask-composite: intersect;
 }
 
 .hero-content {
@@ -230,19 +238,25 @@
     gap: 36px;
   }
 
+  /* drop the indent as soon as it stacks, or the text sits off-centre
+     against the centred illustration */
+  .hero-text {
+    padding-left: 0;
+  }
+
+  .hero-illustration {
+    margin-top: 0;
+  }
+
   .hero-illustration img {
     margin: 0 auto;
-    max-width: 380px;
+    max-width: 340px;
   }
 }
 
 @media (max-width: 768px) {
   .hero-top {
     padding: 48px 20px 80px;
-  }
-
-  .hero-text {
-    padding: 32px 26px;
   }
 
   .hero-subtitle {
