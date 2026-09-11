@@ -84,10 +84,13 @@
   color: var(--cream);
 }
 
+/* Height is measured to the form's actual content (~723px at this width) —
+   a cross-origin iframe can't auto-size, and anything taller renders as
+   dead white space below the submit button. */
 .google-form-container iframe.google-form-iframe {
   display: block;
   width: 100%;
-  height: 1150px;
+  height: 760px;
   border: 0;
   border-radius: 12px;
   background: #fff;
@@ -144,7 +147,7 @@
   }
 
   .google-form-container iframe.google-form-iframe {
-    height: 1300px;
+    height: 900px;
   }
 
   .community-guidelines {
