@@ -14,7 +14,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100px;
+  height: 112px;
 }
 
 /* LOGO */
@@ -29,8 +29,8 @@
 /* Logo file is cropped tight to the calligraphy, so it just needs centring
    inside the cream circle — no zoom, nothing clipped. */
 .logo-mark {
-  width: 58px;
-  height: 58px;
+  width: 82px;
+  height: 82px;
   flex-shrink: 0;
   border-radius: 50%;
   overflow: hidden;
@@ -46,9 +46,9 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  /* the file is cropped tight to the calligraphy, so it needs real breathing
-     room inside the circle or the mark reads as zoomed in */
-  padding: 11px;
+  /* portrait mark (calligraphy + wordmark + scales) — keep the padding small
+     so it renders as large as the circle allows */
+  padding: 5px;
 }
 
 .logo:hover .logo-mark {
@@ -124,8 +124,8 @@
   }
 
   .logo-mark {
-    width: 44px;
-    height: 44px;
+    width: 62px;
+    height: 62px;
   }
 
   .logo-text h1 {

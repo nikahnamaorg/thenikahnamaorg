@@ -3,7 +3,7 @@
   padding: 0 20px 24px;
   position: relative;
   overflow: hidden;
-  /* fill what's left of the screen under the 102px sticky header, so the whole
+  /* fill most of the screen under the sticky header, so the whole
      hero is framed on first load without scrolling */
   min-height: min(calc(100vh - 210px), 560px);
   background-image:
