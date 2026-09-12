@@ -347,3 +347,37 @@
     gap: 16px;
   }
 }
+
+.member-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(91, 15, 9, 0.12);
+}
+
+.member-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--maroon);
+  color: var(--cream);
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 9px 20px;
+  border-radius: 999px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.member-links a svg {
+  width: 17px;
+  height: 17px;
+}
+
+.member-links a:hover {
+  background: var(--maroon-dark);
+  transform: translateY(-2px);
+}
