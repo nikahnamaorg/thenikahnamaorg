@@ -19,7 +19,7 @@ const Hero = ({ onNavigate }) => {
             <div className="ornament"><ScaleIcon /></div>
             <p className="hero-subtitle">
               Simplifying the clauses of the Nikah Nama and raising awareness about the traditions,
-              rituals, and cultural practices surrounding it — enabling young people to make
+              rituals, and cultural practices surrounding it, enabling young people to make
               informed and responsible decisions.
             </p>
             <div className="hero-buttons">
@@ -82,7 +82,7 @@ const Hero = ({ onNavigate }) => {
             <span className="section-kicker">Why It Matters</span>
             <h2>What Is a Nikahnama?</h2>
             <p>
-              The Nikahnama isn't just a formality signed on your wedding day — it's a legal
+              The Nikahnama isn't just a formality signed on your wedding day. It's a legal
               contract, recognized by Pakistan's courts, that spells out real rights and
               responsibilities for both parties.
             </p>
@@ -93,7 +93,7 @@ const Hero = ({ onNavigate }) => {
               agreed to.
             </p>
             <p>
-              Pakistani courts have said this plainly — the Nikahnama is a binding contract, not
+              Pakistani courts have said this plainly: the Nikahnama is a binding contract, not
               a symbolic paper. Knowing what's in it, before you sign, is how you protect your
               own rights from day one.
             </p>

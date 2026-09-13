@@ -23,7 +23,7 @@ const SuggestionsSection = () => {
       <Reveal as="div" className="suggestions-intro">
         <p>
           We value your feedback. Help us improve our resources by sharing your thoughts,
-          ideas, and experiences — it's completely anonymous unless you choose to leave
+          ideas, and experiences. It's completely anonymous unless you choose to leave
           your email.
         </p>
         <div className="suggestion-chips">

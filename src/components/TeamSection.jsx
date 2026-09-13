@@ -27,7 +27,7 @@ const mission = {
 const coverage = [
   "The difference between law, culture, and religion",
   "Traditions and rituals still practiced today, and how they impact lives",
-  "Marital rights — mehr, divorce, custody, maintenance, delegated divorce",
+  "Marital rights: mehr, divorce, custody, maintenance, delegated divorce",
   "Consent, legal protections, and communication"
 ]
 
@@ -43,11 +43,11 @@ const TeamSection = () => {
       description: "A Levels @ ISL",
       fullBio: "Eeshal Imran is an A-Level student at International School Lahore and founder of The Nikahnama Org, advocating for awareness of marital rights and social empowerment. She serves as HR Lead at Mojza and holds ambassador roles with ThinkFest’26, BOEC, Crimson, and ILC, leading outreach, communications, and youth engagement initiatives. Multilingual and skilled in outreach, digital marketing, and storytelling, Eeshal combines leadership with community impact to educate and empower others.",
       image: "/images/eeshal.webp",
-      education: ["A Levels — International School Lahore"],
+      education: ["A Levels, International School Lahore"],
       roles: [
-        "Founder — The Nikahnama Org",
-        "HR Lead — Mojza",
-        "Ambassador — ThinkFest’26, BOEC, Crimson and ILC"
+        "Founder, The Nikahnama Org",
+        "HR Lead, Mojza",
+        "Ambassador for ThinkFest’26, BOEC, Crimson and ILC"
       ],
       skills: ["Outreach", "Digital Marketing", "Storytelling", "Communications", "Multilingual"],
       instagram: "https://www.instagram.com/esh_imran/",
@@ -61,10 +61,10 @@ const TeamSection = () => {
       description: "A Levels @ Lahore Alma",
       fullBio: "Shiza Imtiaz is an A-Level student at The Lahore Alma and co-founder of The Nikahnama Org, where she leads awareness campaigns on marital rights and gender equity. She also serves as an ambassador for ZNotes and has experience in research, creative marketing, and graphic design, combining creativity with strategic thinking to engage youth and promote social impact. Passionate about arts, storytelling, and education, Shiza is dedicated to fostering learning, awareness, and meaningful community initiatives.",
       image: "/images/shiza.jpg",
-      education: ["A Levels — The Lahore Alma"],
+      education: ["A Levels, The Lahore Alma"],
       roles: [
-        "Co-Founder — The Nikahnama Org",
-        "Ambassador — ZNotes"
+        "Co-Founder, The Nikahnama Org",
+        "Ambassador, ZNotes"
       ],
       skills: ["Research", "Creative Marketing", "Graphic Design", "Storytelling"]
     },
@@ -74,19 +74,19 @@ const TeamSection = () => {
       name: "Abdullah Eeshan",
       role: "Secretary General",
       description: "IBDP @ Lahore Grammar School",
-      fullBio: "As Secretary General, Abdullah is responsible for ensuring the smooth day-to-day functioning of the organization — maintaining organizational systems, monitoring departmental progress, supporting the Executive Directorate, and ensuring accountability across all departments. He is also a UN Youth Member (UNAP), a national athlete, and a professional debater.",
+      fullBio: "As Secretary General, Abdullah is responsible for ensuring the smooth day-to-day functioning of the organization: maintaining organizational systems, monitoring departmental progress, supporting the Executive Directorate, and ensuring accountability across all departments. He is also a UN Youth Member (UNAP), a national athlete, and a professional debater.",
       image: "/images/abdullah.png",
       education: [
-        "IBDP (Year 1) — Lahore Grammar School (2026–2028)",
-        "International Baccalaureate, MYP IV–V — Learning Alliance International (2024–2026)",
-        "Lahore Grammar School (2022–2024)"
+        "IBDP (Year 1), Lahore Grammar School (2026-2028)",
+        "International Baccalaureate, MYP IV-V, Learning Alliance International (2024-2026)",
+        "Lahore Grammar School (2022-2024)"
       ],
       roles: [
-        "Secretary General — The Nikahnama Org",
-        "Founder & President — Daira",
-        "Youth Member — United Nations Association of Pakistan (UNAP)",
-        "Global Student Ambassador — Harvard Crimson Global Essay Competition",
-        "Executive Council — Harvard Undergraduate Global Education Movement"
+        "Secretary General, The Nikahnama Org",
+        "Founder & President, Daira",
+        "Youth Member, United Nations Association of Pakistan (UNAP)",
+        "Global Student Ambassador, Harvard Crimson Global Essay Competition",
+        "Executive Council, Harvard Undergraduate Global Education Movement"
       ],
       achievements: [
         "Analyst Intern at Intellia, working on investment research, financial modeling, and client management",
