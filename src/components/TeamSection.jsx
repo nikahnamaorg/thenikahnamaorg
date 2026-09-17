@@ -42,7 +42,7 @@ const TeamSection = () => {
       role: "Founder & CEO",
       description: "A Levels @ SAGE",
       fullBio: "Eeshal Imran is an A-Level student at SAGE (School of Global and Advance Education) and the founder of The Nikahnama Org, where she works to raise awareness of marital rights and challenge the cultural taboos around the Nikahnama. She serves as HR Director on the core team at Mojza, is a core team member at The Uraan Initiative and the Tehran Initiative, and has completed over 600 hours of community service. Skilled in outreach, HR, event management and storytelling, she combines leadership with community impact to educate and empower others.",
-      image: "/images/eeshal.webp",
+      image: "/images/eeshal.jpg",
       education: [
         "A2 Level, SAGE (School of Global and Advance Education) (2026-2027)",
         "AS Level, International School Lahore (2025)",
@@ -107,14 +107,14 @@ const TeamSection = () => {
       name: "Shiza Imtiaz",
       role: "Co-Founder & COO",
       description: "A Levels @ Lahore Alma",
-      fullBio: "Shiza Imtiaz is an A-Level student at The Lahore Alma and co-founder of The Nikahnama Org, where she leads awareness campaigns on marital rights and gender equity. She also serves as an ambassador for ZNotes and has experience in research, creative marketing, and graphic design, combining creativity with strategic thinking to engage youth and promote social impact. Passionate about arts, storytelling, and education, Shiza is dedicated to fostering learning, awareness, and meaningful community initiatives.",
+      fullBio: "Shiza Imtiaz is an A-Level student at The Lahore Alma and co-founder of The Nikahnama Org, where she leads awareness campaigns on marital rights and gender equity. She also serves as an ambassador for ZNotes and has experience in research, creative marketing, and finance, combining creativity with strategic thinking to engage youth and promote social impact. Passionate about arts, storytelling, and education, Shiza is dedicated to fostering learning, awareness, and meaningful community initiatives.",
       image: "/images/shiza.jpg",
       education: ["A Levels, The Lahore Alma"],
       roles: [
         "Co-Founder, The Nikahnama Org",
         "Ambassador, ZNotes"
       ],
-      skills: ["Research", "Creative Marketing", "Graphic Design", "Storytelling"]
+      skills: ["Research", "Creative Marketing", "Finance", "Storytelling"]
     },
     {
       id: 3,
