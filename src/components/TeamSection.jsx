@@ -40,16 +40,33 @@ const TeamSection = () => {
       slug: "eeshal",
       name: "Eeshal Imran Akram",
       role: "Founder & CEO",
-      description: "A Levels @ ISL",
-      fullBio: "Eeshal Imran is an A-Level student at International School Lahore and founder of The Nikahnama Org, advocating for awareness of marital rights and social empowerment. She serves as HR Lead at Mojza and holds ambassador roles with ThinkFest’26, BOEC, Crimson, and ILC, leading outreach, communications, and youth engagement initiatives. Multilingual and skilled in outreach, digital marketing, and storytelling, Eeshal combines leadership with community impact to educate and empower others.",
+      description: "A Levels @ SAGE",
+      fullBio: "Eeshal Imran is an A-Level student at SAGE (School of Global and Advance Education) and the founder of The Nikahnama Org, where she works to raise awareness of marital rights and challenge the cultural taboos around the Nikahnama. She serves as HR Director on the core team at Mojza, is a core team member at The Uraan Initiative and the Tehran Initiative, and has completed over 600 hours of community service. Skilled in outreach, HR, event management and storytelling, she combines leadership with community impact to educate and empower others.",
       image: "/images/eeshal.webp",
-      education: ["A Levels, International School Lahore"],
+      education: [
+        "A2 Level, SAGE (School of Global and Advance Education) (2026-2027)",
+        "AS Level, International School Lahore (2025)",
+        "O Levels, DHA Education System (2020-2024): Vice President of the Debating Society, Class President, and MUN delegate at CSMUN '23 and GRAMMUN '22"
+      ],
       roles: [
         "Founder, The Nikahnama Org",
-        "HR Lead, Mojza",
-        "Ambassador for ThinkFest’26, BOEC, Crimson and ILC"
+        "HR Director (Core Team), Mojza",
+        "Core Team Member, The Uraan Initiative",
+        "Core Team Member, Tehran Initiative",
+        "Global Student Ambassador, Harvard Crimson Global Essay Competition (Crimson Education)",
+        "Ambassador for ThinkFest’26, BOEC and ILC"
       ],
-      skills: ["Outreach", "Digital Marketing", "Storytelling", "Communications", "Multilingual"],
+      achievements: [
+        "Over 600 hours of community service",
+        "Promoted to HR Director at Mojza after starting as an HR intern",
+        "Research Fellow at GVMUN, an 8-week fellowship in international policy and global governance",
+        "Certificate of Merit for her role on the DHA Sports Fest security and organizing team"
+      ],
+      skills: [
+        "Leadership", "Human Resources (HR)", "Outreach", "Event Management",
+        "Digital Marketing", "Social Media Strategy", "Storytelling", "Research & Writing",
+        "Public Speaking", "Multilingual"
+      ],
       instagram: "https://www.instagram.com/esh_imran/",
       linkedin: "https://www.linkedin.com/in/eeshal-imran/"
     },
