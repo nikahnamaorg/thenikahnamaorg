@@ -41,7 +41,7 @@ const TeamSection = () => {
       name: "Eeshal Imran Akram",
       role: "Founder & CEO",
       description: "A Levels @ SAGE",
-      fullBio: "Eeshal Imran is an A-Level student at SAGE (School of Global and Advance Education) and the founder of The Nikahnama Org, where she works to raise awareness of marital rights and challenge the cultural taboos around the Nikahnama. She serves as HR Director on the core team at Mojza, is a core team member at The Uraan Initiative and the Tehran Initiative, and has completed over 600 hours of community service. Skilled in outreach, HR, event management and storytelling, she combines leadership with community impact to educate and empower others.",
+      fullBio: "Eeshal Imran is an A-Level student at SAGE (School of Global and Advance Education) and the founder of The Nikahnama Org, where she works to raise awareness of marital rights and challenge the cultural taboos around the Nikahnama. She serves as HR Director on the core team at Mojza, is a core team member at The Uraan Initiative, serves as Vice President at Daira, and has completed over 600 hours of community service. Skilled in outreach, HR, event management and storytelling, she combines leadership with community impact to educate and empower others.",
       image: "/images/eeshal.jpg",
       education: [
         "A2 Level, SAGE (School of Global and Advance Education) (2026-2027)",
@@ -52,7 +52,7 @@ const TeamSection = () => {
         "Founder, The Nikahnama Org",
         "HR Director (Core Team), Mojza",
         "Core Team Member, The Uraan Initiative",
-        "Core Team Member, Tehran Initiative",
+        "Vice President, Daira",
         "Global Student Ambassador, Harvard Crimson Global Essay Competition (Crimson Education)",
         "Ambassador for ThinkFest’26, BOEC and ILC",
         "Research Fellow, GVMUN",
