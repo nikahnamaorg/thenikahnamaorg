@@ -54,18 +54,49 @@ const TeamSection = () => {
         "Core Team Member, The Uraan Initiative",
         "Core Team Member, Tehran Initiative",
         "Global Student Ambassador, Harvard Crimson Global Essay Competition (Crimson Education)",
-        "Ambassador for ThinkFest’26, BOEC and ILC"
+        "Ambassador for ThinkFest’26, BOEC and ILC",
+        "Research Fellow, GVMUN",
+        "Graphic Design Intern, Paeonia Medical Initiative",
+        "Communications Intern, Youth Peace & Language Association (YPLA)",
+        "Fundraising and Outreach, Jahaan",
+        "Outreach, Dhoond"
       ],
       achievements: [
         "Over 600 hours of community service",
         "Promoted to HR Director at Mojza after starting as an HR intern",
-        "Research Fellow at GVMUN, an 8-week fellowship in international policy and global governance",
         "Certificate of Merit for her role on the DHA Sports Fest security and organizing team"
       ],
+      certifications: [
+        "Blue Ocean Student Entrepreneurs Mini-Course, Blue Ocean Student Entrepreneur Competition (2026)",
+        "Bitcoin and Cryptocurrency, Princeton University",
+        "Computer Science: Programming with Purpose, Princeton University",
+        "Game Theory, Stanford University",
+        "Learn to Program, University of Toronto",
+        "Digital Marketing, DigiSkills.pk",
+        "Freelancing, DigiSkills.pk",
+        "Business Intelligence and Knowledge Management Systems, Alison",
+        "Social English Language Skills, Alison",
+        "Traditional vs Modern Education, RFT Trainings",
+        "Film Making and Video Editing, Evolution Magazine",
+        "Content Writing and Copywriting, Evolution Magazine"
+      ],
       skills: [
-        "Leadership", "Human Resources (HR)", "Outreach", "Event Management",
-        "Digital Marketing", "Social Media Strategy", "Storytelling", "Research & Writing",
-        "Public Speaking", "Multilingual"
+        "Leadership",
+        "Human Resources (HR)",
+        "Recruiting",
+        "HR Management",
+        "Outreach",
+        "Fundraising",
+        "Event Planning",
+        "Start-up Leadership",
+        "Digital Marketing",
+        "Social Media Strategy",
+        "Content Writing",
+        "Storytelling",
+        "Research & Analysis",
+        "Canva",
+        "Public Speaking",
+        "Multilingual"
       ],
       instagram: "https://www.instagram.com/esh_imran/",
       linkedin: "https://www.linkedin.com/in/eeshal-imran/"
@@ -185,6 +216,15 @@ const TeamSection = () => {
               <h4>Achievements</h4>
               <ul>
                 {m.achievements.map((a, i) => <li key={i}>{a}</li>)}
+              </ul>
+            </div>
+          )}
+
+          {m.certifications && m.certifications.length > 0 && (
+            <div className="member-block">
+              <h4>Licenses &amp; Certifications</h4>
+              <ul>
+                {m.certifications.map((c, i) => <li key={i}>{c}</li>)}
               </ul>
             </div>
           )}
