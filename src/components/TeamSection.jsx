@@ -41,7 +41,7 @@ const TeamSection = () => {
       name: "Eeshal Imran Akram",
       role: "Founder & CEO",
       description: "A Levels @ SAGE",
-      fullBio: "Eeshal Imran is an A-Level student at SAGE (School of Global and Advance Education) and the founder of The Nikahnama Org, where she works to raise awareness of marital rights and challenge the cultural taboos around the Nikahnama. She serves as HR Director on the core team at Mojza, is a core team member at The Uraan Initiative, serves as Vice President at Daira, and has completed over 600 hours of community service. Skilled in outreach, HR, event management and storytelling, she combines leadership with community impact to educate and empower others.",
+      fullBio: "Eeshal Imran is an A-Level student at SAGE (School of Global and Advance Education) and the founder of The Nikahnama Org, where she works to raise awareness of marital rights and challenge the cultural taboos around the Nikahnama. She serves as HR Director on the core team at Mojza, is a core team member at The Uraan Initiative, serves as Vice President at Daira, and has completed over 600 hours of community service. Skilled in outreach, HR and event management, and an active MUN delegate, she combines leadership with community impact to educate and empower others.",
       image: "/images/eeshal.jpg",
       education: [
         "A2 Level, SAGE (School of Global and Advance Education) (2026-2027)",
@@ -50,20 +50,20 @@ const TeamSection = () => {
       ],
       roles: [
         "Founder, The Nikahnama Org",
-        "HR Director (Core Team), Mojza",
-        "Core Team Member, The Uraan Initiative",
+        "HR Director, Mojza",
+        "Core Team, The Uraan Initiative",
         "Vice President, Daira",
-        "Global Student Ambassador, Harvard Crimson Global Essay Competition (Crimson Education)",
-        "Ambassador for ThinkFest’26, BOEC and ILC",
-        "Research Fellow, GVMUN",
-        "Graphic Design Intern, Paeonia Medical Initiative",
+        "Business Acquisition Intern, Dhoond",
+        "Global Student Ambassador, Harvard Crimson Global Essay Competition",
+        "Ambassador for BOEC, ILC and ThinkFest’26",
         "Communications Intern, Youth Peace & Language Association (YPLA)",
-        "Fundraising and Outreach, Jahaan",
-        "Outreach, Dhoond"
+        "Fundraising and Outreach Intern, Jahaan",
+        "Ex-Recruitment Officer, ZNotes"
       ],
       achievements: [
         "Over 600 hours of community service",
         "Promoted to HR Director at Mojza after starting as an HR intern",
+        "Research Fellow at GVMUN, an 8-week fellowship in international policy and global governance",
         "Certificate of Merit for her role on the DHA Sports Fest security and organizing team"
       ],
       certifications: [
